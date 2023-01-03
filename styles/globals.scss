@@ -1,0 +1,346 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap'); 
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+  height: 100vh;
+  color: #333;
+  background-image: url("/bg.svg");
+  background-repeat: no-repeat;
+  background-position: 100% 80px;
+  background-attachment: scroll;
+}
+
+
+
+svg { vertical-align: baseline; }
+
+footer {
+  margin-top: 40px;
+  padding-top: 32px;
+  display: flex;
+  flex: 1;
+  padding: 1rem 0;
+  border-top: 1px solid #eaeaea;
+  justify-content: center;
+  align-items: center;
+  color: #D9DBE1;
+  font-size: 0.8em;
+  background-color: #151827;
+}
+
+footer div a {
+  color: #eaeaea;
+  font-size: 1em;
+  line-height: 1.5em;
+}
+
+footer a svg {
+  vertical-align: middle;
+  margin: 2px;
+  width:16px;
+  height: 16px;
+}
+
+
+header {
+  margin-bottom: 10px;
+  padding: 1.6rem 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+.middle-center {
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.fit-right {
+  float: right;
+}
+
+.text-primary {
+  margin-top: 40px;
+}
+
+h1 {
+  font-size: 1.6rem;
+}
+
+h2 {
+  font-size: 1.4rem;
+}
+
+
+@media (max-width: 425px) {
+  .wrapper {
+    margin-top: 40px;
+  }
+
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+.main {
+  display: flex;
+  justify-content: space-between;
+}
+
+.block {
+  text-align: center;
+  border: 1px solid greenyellow;
+}
+
+@media (max-width: 1024px) {
+  .main {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 1024px) {
+  .main {
+    margin-top: 40px;
+  }
+}
+
+.no-overflow {
+  overflow: hidden;
+}
+
+.width100 {
+  width:100%;
+  max-width: 400px;
+}
+
+.silver {
+  color: silver;
+  border: 1px solid silver;
+  border-radius: 4px;
+}
+
+.pageinfo, .pageinfo a {
+  color: #666;
+  font-size: 50%;
+}
+
+.error {
+  color: darkred;
+  text-transform: capitalize;
+}
+
+.centered {
+  margin: auto;
+}
+
+.btncenter {
+  margin: auto;
+  min-width: 150px;
+}
+
+
+.cmenu {
+  margin-left: 20px;
+  margin-top:  10px;
+  padding: 0px;
+}
+
+.cmenu a {
+  font-family: 'Avenir';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #5D6180;
+  
+}
+
+.reverted {
+  background-color: darksalmon;
+  color: darkred;
+  padding: 12px;
+  border-radius: 5px;
+}
+
+.successful {
+  background-color: darkseagreen;
+  color: darkgreen;
+  padding: 12px;
+  border-radius: 5px;
+}
+
+.smaller {
+  font-size: 80%;
+}
+
+.grey, .grey a {
+  color: #666;
+}
+
+.white, .white a {
+  color: #eaeaea;
+}
+
+p, p i, a {
+  word-wrap: break-word;
+}
+
+#__next {
+  background-image: url("/over.svg");
+  background-repeat: no-repeat;
+  background-position: 0% 90%;
+  background-attachment: scroll;
+}
+
+
+
+
+
+
+.qrcode {
+  text-align: center;
+  padding:0px;
+}
+
+ 
+
+.card {
+  border: 0px;
+  box-shadow: 0px 8px 40px -2px rgba(6, 12, 59, 0.08);
+  margin: 16px;
+}
+
+
+
+
+.cols2 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cols2 div {
+  margin-top: 4px;
+}
+
+
+
+
+
+
+
+
+
+ol.indexList {
+  display: block;
+  padding: 20px 0 0 16px;
+  list-style: none;
+  counter-reset: numList;
+}
+
+/* ol {
+  display: block;
+  padding: 0 0 0 26px;
+  background: #ccc;
+  overflow: hidden;
+  counter-reset: numList;
+} */
+
+ol.indexList li {
+  margin-left: 36px;
+  float: left;
+  position: relative;
+  font-size: 20px;
+}
+
+ol.indexList li p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+}
+
+ol.indexList li:before {
+  counter-increment: numList;
+  content: counter(numList);
+  
+  float: left;
+  position: absolute;
+  left: -46px;
+  top: -4px;
+  
+  font-size: 22px;
+  text-align: center;
+  color: #fff;
+  line-height: 36px;
+  
+  width: 36px; height: 36px;
+  background: #2C70F4;
+  
+  -moz-border-radius: 50%;
+  border-radius: 50%
+}
+
+.tf-nc {
+    text-align: center;
+    
+}
+
+#index {
+  font-family: "Avenir";
+
+  .card {
+    padding-left: 0px;
+    background-color: transparent;
+    box-shadow: none;
+    
+  }
+  
+  .levels {
+    margin-top: 32px; 
+    font-size: 80%;
+  }
+  
+  .indexText {
+    font-size:18px;
+    font-weight:400;
+    /* padding-right: 16px; */
+    line-height: 156%;
+    text-align: justify;
+  
+    /* Greyscale/Grey */
+    color: #5D6180;
+  
+  }
+  
+  .indexTitle {
+    color: black;
+    font-size: 50px;
+  }
+  
+  .shift {
+    margin-left: 2.5em;
+  }
+
+}
+
+
+@media (max-width: 325px) {
+  .qrcode {
+    margin:10px -20px; 
+  }
+  .card {
+    margin: 0;
+    padding: 0;
+  }
+  .chartIllustration {
+    padding: 0px;
+  } 
+}

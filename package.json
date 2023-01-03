@@ -1,0 +1,38 @@
+{
+  "name": "smrt16.com",
+  "version": "0.33.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
+    "@fontsource/lato": "^4.5.10",
+    "@fontsource/plus-jakarta-sans": "^4.5.10",
+    "@mui/icons-material": "^5.11.0",
+    "@mui/lab": "^5.0.0-alpha.114",
+    "@mui/material": "^5.11.2",
+    "axios": "^1.2.0",
+    "bootstrap": "^5.2.3",
+    "chart.js": "^4.1.1",
+    "ethers": "^5.7.2",
+    "moment": "^2.29.4",
+    "next": "13.1.1",
+    "react": "18.2.0",
+    "react-bootstrap": "^2.7.0",
+    "react-bootstrap-icons": "^1.8.4",
+    "react-chartjs-2": "^5.1.0",
+    "react-copy-to-clipboard": "^5.1.0",
+    "react-currency-input-field": "^3.6.5",
+    "react-dom": "18.2.0",
+    "react-ga4": "^1.4.1",
+    "react-gravatar": "^2.6.3",
+    "react-qr-code": "^2.0.8",
+    "react-to-print": "^2.14.10",
+    "sass": "^1.57.1"
+  }
+}
