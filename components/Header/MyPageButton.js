@@ -11,7 +11,6 @@ export default function MyPageButton(props) {
     const context = useContext(SMRT16Context);
     const [utilsUnabled, setUtilsEnabled] = useState(false);
 
-    
 
     useEffect(() => {
         if(context?.r?.ethereum) {
@@ -53,8 +52,11 @@ export default function MyPageButton(props) {
     },[context]);
 
     return (
-        <Suspense fallback={`Detecting MetaMask...`} {...otherProps}>
-            {utilsUnabled && props.children} {myButton}
-        </Suspense>
+        <span {...otherProps} className="myPageButton">
+            <Suspense fallback={`Detecting MetaMask...`} >
+                {utilsUnabled && props.children} {myButton}
+            </Suspense>
+        </span>
+        
     );
 }

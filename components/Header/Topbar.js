@@ -20,7 +20,7 @@ export default function Topbar(props) {
                         height={50}
                     /></Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
-            <Navbar.Collapse id="basic-navbar-nav" >
+            <Navbar.Collapse id="basic-navbar-nav" style={{background: "white"}} >
               <Nav className="me-auto cmenu">
                 <Nav.Link href="/">Home</Nav.Link>
                 <Nav.Link href="/#getstarted">Get Started</Nav.Link>
@@ -41,9 +41,8 @@ export default function Topbar(props) {
                     Add USDT token 
                     </NavDropdown.Item>
                 </NavDropdown>
-                <Nav.Link href="#mypage">
-                  <MyPageButton />
-                </Nav.Link>
+                <Navbar.Text>&nbsp;</Navbar.Text>
+                <MyPageButton />
               </Nav>
             </Navbar.Collapse>
           </Container>
