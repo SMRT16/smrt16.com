@@ -1,7 +1,7 @@
 import React, {  useState } from "react";
 import { Container, Image, Nav, Navbar, NavDropdown } from "react-bootstrap";
 import MyPageButton from "./MyPageButton";
-
+import {addPolygon, addSMRT16, addUSDT} from "../Utils/blockchain"
 
 export const TopbarContext = React.createContext();
 
@@ -31,17 +31,17 @@ export default function Topbar(props) {
               </Nav>
               <Nav>
               <NavDropdown title="MetaMask" id="basic-nav-dropdown" >
-                    <NavDropdown.Item href="#addPolygon">
+                    <NavDropdown.Item href="#addPolygon" onClick={addPolygon}>
                     Add Polygon network 
                     </NavDropdown.Item>
-                    <NavDropdown.Item href="#addSMRT16">
+                    <NavDropdown.Item href="#addSMRT16" onClick={addSMRT16}>
                     Add SMRT16 token 
                     </NavDropdown.Item>
-                    <NavDropdown.Item href="#addUSDT">
+                    <NavDropdown.Item href="#addUSDT" onClick={addUSDT}>
                     Add USDT token 
                     </NavDropdown.Item>
                     <NavDropdown.Divider />
-                    <NavDropdown.Item href="#whyMetaMask">
+                    <NavDropdown.Item href="/faq#whyMetaMask">
                     Why it requires MetaMask? 
                     </NavDropdown.Item>
                 </NavDropdown>

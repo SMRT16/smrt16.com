@@ -12,6 +12,9 @@ import { SMRT16Context } from "../components/SMRT16Context.js";
 import { Skeleton } from "@mui/material";
 import { Masonry } from "@mui/lab";
 import { useRouter } from "next/router.js";
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
+
 
 export default function FAQPage() {
     const context = useContext(SMRT16Context);
@@ -56,7 +59,7 @@ export default function FAQPage() {
                             <Card style={anc==item.id?{background:"#eefae3"}:{background:"white"}}>
                                 <Card.Body>
                                     <Card.Title>{item.question}</Card.Title>
-                                    <Card.Text>{item.answer}</Card.Text>
+                                    <ReactMarkdown children={item.answer} remarkPlugins={[remarkGfm]} />
                                 </Card.Body>
                             </Card>
 

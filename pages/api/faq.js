@@ -57,6 +57,13 @@ export default function handler(req, res) {
         question:"How to get MetaMask?",
         answer:"Please, follow the instructions from the official MetaMask website: https://metamask.io"
       },
+      {
+        id:"bug",
+        key:"bug",
+        question:"How to report a bug?",
+        answer:"Please, use a form on the GiHub https://github.com/SMRT16/smrt16.com/issues or you can just send an email to dev@smrt16.com"
+      },
+      
       
 
 

@@ -31,8 +31,11 @@
     "react-dom": "18.2.0",
     "react-ga4": "^1.4.1",
     "react-gravatar": "^2.6.3",
+    "react-markdown": "^8.0.4",
     "react-qr-code": "^2.0.8",
     "react-to-print": "^2.14.10",
-    "sass": "^1.57.1"
+    "remark-gfm": "^3.0.1",
+    "sass": "^1.57.1",
+    "use-local-storage": "^2.3.6"
   }
 }

@@ -1,11 +1,11 @@
 import React, { useContext } from "react";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import { Telegram, EnvelopeHeart, Github, Code, Bug } from 'react-bootstrap-icons';
+import { Telegram, EnvelopeHeart, Github, Code, Bug, HouseHeart } from 'react-bootstrap-icons';
 import { TheData } from "./Utils/data.js";
 import { SMRT16Context } from "./SMRT16Context";
 import { Container } from "react-bootstrap";
-import { ManageHistory } from "@mui/icons-material";
+import { ManageHistory, Money } from "@mui/icons-material";
 
 
 
@@ -39,6 +39,7 @@ const Footer = () => {
             <div><a href="https://github.com/SMRT16/smrt16.com" target="_blank"><Github/>&nbsp;SMRT16 DApp sources</a></div>
             <div><a href="https://polygonscan.com/address/0x1b605deaedc71f1a764e572b1ca68b5060978753#code" target="_blank"><Code/>&nbsp;SMRT16 Smart Contract sources</a></div>
             <div><a  href="/faq#bug"><Bug />&nbsp;How to report a bug</a></div>
+            <div><ManageHistory style={{width:16,height:16}}/>&nbsp;DApp version: {TheData.version}</div>
           </div>
           
 
@@ -53,7 +54,10 @@ const Footer = () => {
             <div>
                 <a href="mailto:dev@smrt16.com" target="_blank"><EnvelopeHeart/>&nbsp;dev@smrt16.com</a>
             </div>
-            <div><ManageHistory style={{width:16,height:16}}/>&nbsp;DApp version: {TheData.version}</div>
+            <hr/>
+            <div><a href="/0"><Money style={{width:16,height:16}}/>&nbsp;Random referrer</a></div>
+            <div><a href="/1"><HouseHeart style={{width:16,height:16}}/>&nbsp;Client area</a></div>
+            
           </div>
         </Col>
 
