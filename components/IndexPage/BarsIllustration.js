@@ -70,27 +70,30 @@ return (
                   Assumption caclulator of a possible income
                 </Card.Title>
                   <p><u>Try to enter your numbers:</u></p>
-                  <div className="cols2"><div>Affiliates number every level</div> 
-                    <div>
-                      <CurrencyInput style={{width:"60px"}}
-                            decimalsLimit={0}
-                            defaultValue={a}
-                            maxLength={2}
-                            onValueChange={(value) => {
-                              setRefCount(value);
-                            onInputChange(value,refUsd)}} />
-                    </div>
-                  </div>
-                  <div className="cols2"><div>Average purchase USDT</div> 
+                  
+                  <div className="cols2"><div><label for="Average">Average purchase USDT</label></div> 
                     <div>
                       <CurrencyInput style={{width:"60px"}}
                             decimalsLimit={2}
                             defaultValue={b}
                             maxLength={6}
+                            id="Average"
                             prefix="$"
                             onValueChange={(value) => {
                               setRefUsd(value);
                             onInputChange(refCount,value)}} />
+                    </div>
+                  </div>
+                  <div className="cols2"><div><label for="Affiliates">Affiliates number every level</label></div> 
+                    <div>
+                      <CurrencyInput style={{width:"60px"}}
+                            decimalsLimit={0}
+                            defaultValue={a}
+                            maxLength={2}
+                            id="Affiliates"
+                            onValueChange={(value) => {
+                              setRefCount(value);
+                            onInputChange(value,refUsd)}} />
                     </div>
                   </div>
                   <br/>

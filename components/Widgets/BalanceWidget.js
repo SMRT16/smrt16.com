@@ -6,8 +6,6 @@ import { SMRT16Context } from "../SMRT16Context";
 import { TheData } from "../Utils/data";
 
 
-
-
 /**
  * 
  * @param {id} props 
