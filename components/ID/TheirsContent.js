@@ -1,5 +1,6 @@
 import { React, useContext } from "react";
 import { Col, Row } from "react-bootstrap";
+import BalanceWidget from "../Widgets/BalanceWidget";
 
 
 export default function TheirsContent(props) {
@@ -8,7 +9,7 @@ export default function TheirsContent(props) {
         <>
             <Row>
                 <Col sm={12} lg={6} md={12}>
-                    {"<BalanceWidget />"}
+                    <BalanceWidget />
                     <br/>
                 </Col>
                 <Col sm={12} lg={6} md={12}>

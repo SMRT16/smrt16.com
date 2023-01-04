@@ -494,7 +494,7 @@ Partners of the SMTR16 project are highly motivated to engage in marketing - aft
     ],
     usdtContractAddr: "0xc2132D05D31c914a87C6611C10748AEb04B58e8F",
     smrt16ContractAddr: "0x1b605dEaEDC71f1A764E572b1ca68B5060978753",
-    siteBase: "https://smrt16.com/",
+    siteBase: "/",
     txScan: "https://polygonscan.com/tx/",
     addrScan: "https://polygonscan.com/address/",
     sellingSMRT16: "History of your USDT and SMRT16 transactions",
