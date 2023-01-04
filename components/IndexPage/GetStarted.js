@@ -3,7 +3,7 @@ import { Card } from "react-bootstrap";
 export default function GetStarted(props) {
     const { children, ...otherProps } = props;
 return (
-    <div {...otherProps}>
+    <div {...otherProps} id="getstarted">
         <Card>
             <Card.Body>
               <Card.Title as="h1">What do you need to <b>get started</b>?</Card.Title>

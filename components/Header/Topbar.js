@@ -40,6 +40,10 @@ export default function Topbar(props) {
                     <NavDropdown.Item href="#addUSDT">
                     Add USDT token 
                     </NavDropdown.Item>
+                    <NavDropdown.Divider />
+                    <NavDropdown.Item href="#whyMetaMask">
+                    Why it requires MetaMask? 
+                    </NavDropdown.Item>
                 </NavDropdown>
                 <Navbar.Text>&nbsp;</Navbar.Text>
                 <MyPageButton />

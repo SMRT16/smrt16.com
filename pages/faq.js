@@ -11,18 +11,30 @@ import { TheData } from "../components/Utils/data.js";
 import { SMRT16Context } from "../components/SMRT16Context.js";
 import { Skeleton } from "@mui/material";
 import { Masonry } from "@mui/lab";
+import { useRouter } from "next/router.js";
 
 export default function FAQPage() {
     const context = useContext(SMRT16Context);
-    const [data, setData] = useState(null)
+    const [data, setData] = useState(null);
+    const router = useRouter();
+    const [anc,setAnc] = useState('');
+
+    console.log('Au?');
+
     useEffect(()=>{
+
         context.SMRT16dispatch({id:"faq"});
+
         fetch('/api/faq')
         .then((res) => res.json())
         .then((data) => {
             setData(data);
         })
+        setAnc(router.asPath.split('#')[1]);
+        
     },[]);
+
+
   
   return (
 
@@ -34,7 +46,6 @@ export default function FAQPage() {
             <p className="text-center mb-5">
                 <strong>{TheData.faqSubtitle}</strong>
             </p>
-        
             <Row style={{ justifyContent: "space-between" }} >
                 <Col>
                 
@@ -42,7 +53,7 @@ export default function FAQPage() {
                 <Masonry columns={{ xs: 1, sm: 2, lg:3, xl:4 }} spacing={2}>
                     {data.map((item, index) => (
                         <div key={index} className="no-overflow" id={item.id}>
-                            <Card>
+                            <Card style={anc==item.id?{background:"#eefae3"}:{background:"white"}}>
                                 <Card.Body>
                                     <Card.Title>{item.question}</Card.Title>
                                     <Card.Text>{item.answer}</Card.Text>

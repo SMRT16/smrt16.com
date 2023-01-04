@@ -44,7 +44,22 @@ export default function handler(req, res) {
         "question": "What is the essence of the referral program?",
         "answer": "A referral program is a type of affiliate program, a fairly popular way to make money on the Internet, in which the partner receives a certain reward (this can be discounts, a percentage of sales, etc.) for helping to sell goods and services, as well as for attracting new customers, which are also called \"referrals\".  There are different affiliate programs.  One level — the referrer independently invites a person and receives a reward if the client follows the link. Under this condition, the partner can have as many referrals as he likes. Several levels - the partner receives a reward not only for self-invited referrals, but also for those who have already invited new customers. That is, the referral invites a person, he calls another, and for both they pay a reward to the partner. SMRT16 has four levels of referral program.",
         "key": "whatsRef"
-      }
+      },
+      {
+        id:"whyMetaMask",
+        key:"whyMetaMask",
+        question:"Why it requires MetaMask?",
+        answer:"If to be precise, it does not. Indeed, SMRT16 is DApp and it requires to communicate to your Polygon blockchain wallet. But it can be any BIP-32 provider. Browsers like Opera has built-in crypto wallet - it will work! Yet, the most popular solution remains MetaMask."
+      },
+      {
+        id:"getMetaMask",
+        key:"getMetaMask",
+        question:"How to get MetaMask?",
+        answer:"Please, follow the instructions from the official MetaMask website: https://metamask.io"
+      },
+      
+
+
     ]
   )
 }
