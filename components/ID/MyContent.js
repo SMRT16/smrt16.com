@@ -2,6 +2,7 @@ import { React, useContext } from "react";
 import { Col, Row } from "react-bootstrap";
 import BalanceWidget from "../Widgets/BalanceWidget";
 import BuyFromButton from "../Widgets/BuyFromButton";
+import ProfileWidget from "../Widgets/ProfileWidget";
 
 
 export default function MyContent(props) {
@@ -15,7 +16,7 @@ export default function MyContent(props) {
                     <BuyFromButton />
                 </Col>
                 <Col sm={12} lg={6} md={12}>
-                    {"<ProfileWidget id={context.r.addr}/>"}
+                    <ProfileWidget />
                     <br/>
                     {"<SellWidget id={context.r.addr}/>"}
                     <br/>

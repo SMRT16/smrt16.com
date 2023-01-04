@@ -6,6 +6,7 @@ import { SMRT16Context } from "./SMRT16Context";
 import { ethers } from "ethers";
 import { TheData } from "./Utils/data";
 import { Skeleton } from "@mui/material";
+import { getUser } from "./Utils/user";
 
 /**
  * Tasks:
@@ -33,10 +34,7 @@ export default function RedirectWrapper(props) {
 
     console.log("RedirectWrapper");
 
-    const getUser = async (uid)=>{
-        // TODO: replace firebase
-        return {};
-    }
+
 
 
     useEffect(()=>{
