@@ -13,7 +13,6 @@ export default function MyContent(props) {
                 <Col sm={12} lg={6} md={12}>
                     <BalanceWidget />
                     <BuyFromButton />
-                    <br/>
                 </Col>
                 <Col sm={12} lg={6} md={12}>
                     {"<ProfileWidget id={context.r.addr}/>"}

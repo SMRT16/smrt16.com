@@ -79,26 +79,29 @@ export default function BalanceWidget(props) {
 
             
         </div>
-        {context.r.pcontract && <p className="smaller grey">
-                    {/* <div title="pcontract">" {context.r.pcontract}"</div> */}
-            {context.r.pcontract!='0x0000000000000000000000000000000000000000' ?
-            
-            <span title={context.r.pcontract}>
-                Your referrer is:&nbsp; 
-                    {context.r.referrer? 
-                        <a  href={'/'+context.r.referrer}>{context.r.referrer}</a>
-                        :
-                        <Skeleton />
-                    }
-                </span>
-            
-            :
-            <>You don't have a referrer yet.</>
-            }
-        </p>}
+        
+        
         
     </Card.Body>
-        
+        <Card.Footer>
+            {context.r.pcontract && <span className="smaller grey">
+                        {/* <div title="pcontract">" {context.r.pcontract}"</div> */}
+                {context.r.pcontract!='0x0000000000000000000000000000000000000000' ?
+                
+                <span title={context.r.pcontract}>
+                    Your referrer is fixed to:&nbsp; 
+                        {context.r.referrer? 
+                            <a  href={'/'+context.r.referrer}>{context.r.referrer}</a>
+                            :
+                            <Skeleton />
+                        }
+                    </span>
+                
+                :
+                <>You don't have a fixed referrer yet.</>
+                }
+            </span>}
+        </Card.Footer>
     </Card>
         
     );

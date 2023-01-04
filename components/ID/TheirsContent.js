@@ -1,6 +1,7 @@
 import { React, useContext } from "react";
 import { Col, Row } from "react-bootstrap";
 import BalanceWidget from "../Widgets/BalanceWidget";
+import BuyWidget from "../Widgets/BuyWidget/BuyWidget"
 
 
 export default function TheirsContent(props) {
@@ -13,7 +14,7 @@ export default function TheirsContent(props) {
                     <br/>
                 </Col>
                 <Col sm={12} lg={6} md={12}>
-                    {"<BuyWidget myaddr={context.r.addr} myreferrer={context.r.referrer} bdata={context.r} />"}
+                    <BuyWidget  />
                     <br/>
                 </Col>
             </Row>

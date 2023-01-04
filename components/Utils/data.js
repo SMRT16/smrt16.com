@@ -519,4 +519,5 @@ So, the first step now is to approve some amount of USDT for SMRT16 contract to 
     PolygonNotConnected:"Your wallet is not connected to Polygon!",
     "APIgetWalletTokenTransfers":"https://us-central1-smrt16-d1904.cloudfunctions.net/s/getWalletTokenTransfers/",
     "APIgetLast0":"https://us-central1-smrt16-d1904.cloudfunctions.net/s/getLast0?me=",
+    defaultAmountToBuy:100,
 };
