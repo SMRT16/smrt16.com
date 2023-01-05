@@ -26,6 +26,7 @@ export default function MyPageButton(props) {
                     if(context.r.errors.length){
                         if(context.r.errors[context.r.errors.length-1].code=="-32002") {
                             setMyButton(<>Please, unlock MetaMask</>);
+                            context.SMRT16dispatch({error:"error",reason:"MetaMask is locked."});
                         } else {
                             setMyButton(<>{context.r.errors[context.r.errors.length-1].reason}</>);
                         }

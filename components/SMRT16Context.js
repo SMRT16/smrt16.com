@@ -146,9 +146,8 @@ export function SMRT16Provider ({children}) {
                 r.ethereum.on('accountsChanged', handleAccountsChanged);
             } else {
                 console.log("Ethereum not found");
-                
-              r.errors.push({reason:'Please, connect to MetaMask'});
-              r.myPageBtnMsg = 'Please, connect to MetaMask';
+                dispatch({error:"error",reason:'Please, connect to MetaMask'});
+                r.myPageBtnMsg = 'Please, connect to MetaMask';
             }
         } 
 
