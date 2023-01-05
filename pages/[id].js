@@ -1,7 +1,8 @@
 import { Skeleton } from "@mui/material";
 import { useRouter } from "next/router";
-import { useContext, useEffect } from "react";
-import { Container } from "react-bootstrap";
+import { useContext, useEffect, useState } from "react";
+import { Alert, Container } from "react-bootstrap";
+import ErrorsDisplay from "../components/ErrorsDisplay";
 import Footer from "../components/Footer";
 import Header from "../components/Header/Header";
 import Topbar from "../components/Header/Topbar";
@@ -13,14 +14,19 @@ import { SMRT16Context } from "../components/SMRT16Context";
 export default function IDPage() {
     const router = useRouter();
     const { id } = router.query;
-  
     const context = useContext(SMRT16Context);
     
-      
+
+
     useEffect(()=>{
       if(id && context.r.id!=id) {
         console.log('let context to know about the navigation');
         context.SMRT16dispatch({id});
+        let a = [];
+        for (let i = 0; i < context.r.errors.length; i++) {
+          const element = context.r.errors[i];
+          
+        }
       }
     },[context]);
   
@@ -30,6 +36,9 @@ export default function IDPage() {
         <Topbar id={id} />
         <RedirectWrapper id={id}>
           <Container>
+            
+            <ErrorsDisplay />
+            
             {!id ? <>
               <Skeleton xs={16} />
             </>:<>

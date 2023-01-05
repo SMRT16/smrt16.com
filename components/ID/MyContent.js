@@ -3,6 +3,8 @@ import { Col, Row } from "react-bootstrap";
 import BalanceWidget from "../Widgets/BalanceWidget";
 import BuyFromButton from "../Widgets/BuyFromButton";
 import ProfileWidget from "../Widgets/ProfileWidget";
+import SellWidget from "../Widgets/SellWidget";
+import StatWidget from "../Widgets/StatWidget";
 
 
 export default function MyContent(props) {
@@ -11,18 +13,16 @@ export default function MyContent(props) {
     return (
         <>
             <Row>
-                <Col sm={12} lg={6} md={12}>
-                    <BalanceWidget />
+                <Col sm={12} lg={{span:6, order:"last"}} md={12}>
+                    <ProfileWidget />
                     <BuyFromButton />
                 </Col>
                 <Col sm={12} lg={6} md={12}>
-                    <ProfileWidget />
-                    <br/>
-                    {"<SellWidget id={context.r.addr}/>"}
-                    <br/>
-                    { "<StatWidget />" }
-                    <br/>
+                    <BalanceWidget />
+                    <SellWidget />
+                    <StatWidget />
                 </Col>
+                
             </Row>
         </>
     );

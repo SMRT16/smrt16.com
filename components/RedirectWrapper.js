@@ -67,8 +67,12 @@ export default function RedirectWrapper(props) {
             case '1': {
                 console.log("redirect to my page");
                 if(context.r.addr) {
-                    console.log("if there is MetaMask setup, redirect to MyPage")
-                    router.push('/'+context.r.addr);
+                    if(context.r.addr!='1') {
+                        console.log("if there is MetaMask setup, redirect to MyPage",context.r.addr)
+                        router.push('/'+context.r.addr);
+                    } else {
+                        // Reamain on '1' path
+                    }
                 } else {
                     //p1.4.1
                     context.SMRT16dispatch({id, addr:id});

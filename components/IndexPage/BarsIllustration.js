@@ -71,7 +71,7 @@ return (
                 </Card.Title>
                   <p><u>Try to enter your numbers:</u></p>
                   
-                  <div className="cols2"><div><label for="Average">Average purchase USDT</label></div> 
+                  <div className="cols2"><div><label htmlFor="Average">Average purchase USDT</label></div> 
                     <div>
                       <CurrencyInput style={{width:"60px"}}
                             decimalsLimit={2}
@@ -84,7 +84,7 @@ return (
                             onInputChange(refCount,value)}} />
                     </div>
                   </div>
-                  <div className="cols2"><div><label for="Affiliates">Affiliates number every level</label></div> 
+                  <div className="cols2"><div><label htmlFor="Affiliates">Affiliates number every level</label></div> 
                     <div>
                       <CurrencyInput style={{width:"60px"}}
                             decimalsLimit={0}

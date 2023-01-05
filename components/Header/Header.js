@@ -31,7 +31,7 @@ const Header = (props) => {
         <meta property="og:type" content="product" />
         <meta property="og:image" content="/previewm.jpeg" />
         <meta content="origin" name="referrer" />
-        <meta content="/assets/smrt16-with-text-logo.png" itemprop="image" />
+        <meta content="/assets/smrt16-with-text-logo.png" itemProp="image" />
       </Head>
   );
 };

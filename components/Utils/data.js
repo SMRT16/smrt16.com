@@ -1,5 +1,5 @@
 export const TheData = {
-  "version":"0.33",
+  "version":"0.34",
 
     "projInfo":{
 
@@ -494,7 +494,7 @@ Partners of the SMTR16 project are highly motivated to engage in marketing - aft
     ],
     usdtContractAddr: "0xc2132D05D31c914a87C6611C10748AEb04B58e8F",
     smrt16ContractAddr: "0x1b605dEaEDC71f1A764E572b1ca68B5060978753",
-    siteBase: "/",
+    siteBase: "https://smrt16.com/",
     txScan: "https://polygonscan.com/tx/",
     addrScan: "https://polygonscan.com/address/",
     sellingSMRT16: "History of your USDT and SMRT16 transactions",
@@ -515,8 +515,22 @@ So, the first step now is to approve some amount of USDT for SMRT16 contract to 
     sorry:"Sorry",
     itsYourPage:"It's Your page",
     somebody:"random account",
+    sellTitle:"Your referral link",
+    sellFooter:`The link consists of the smrt16.com - the domain of the DApp concatenated by '/' with the address of your wallet. 
+    Note: that your referral bonuses is limited with your SMRT6 balance.`,
+    copyToClipboard:"Copy Link",
+    copiedToClipboad:"Copied",
+    printQRcode:"Print QR code",
+    showQRcode:"Show QR code",
+    hideQRcode:"Hide QR code",
     buyFrom:"Buy from",
+    youDontHaveLink:"You don't have a referral link for this wallet.",
+    bonusSizeNote:"The size of your referral reward is limited by the size of your smrt16 tokens balance.",
+    burningNote:"Every time you receive your referral reward, a small amount of smrt16 tokens is burned from your balance.",
+    youNeedToBuy:"In order to have a referral link your wallet needs to be register in the Smart Contract and to make this happen you need to buy any amount of SMRT16 tokens from this wallet. ",
+    yourReferralLinkExpl:"Let your referrals to buy SMRT16 tokens from the page of this link.",
     PolygonNotConnected:"Your wallet is not connected to Polygon!",
+
     "APIgetWalletTokenTransfers":"https://us-central1-smrt16-d1904.cloudfunctions.net/s/getWalletTokenTransfers/",
     "APIgetLast0":"https://us-central1-smrt16-d1904.cloudfunctions.net/s/getLast0?me=",
     defaultAmountToBuy:100,

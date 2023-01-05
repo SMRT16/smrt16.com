@@ -1,4 +1,5 @@
 import { ethers } from "ethers";
+import _ from "lodash";
 import React, { useEffect, useReducer } from "react";
 import { TheData } from "./Utils/data";
 
@@ -72,10 +73,22 @@ export function SMRT16Provider ({children}) {
     }
 
     const reducer = (state, a) => {
+
         const r = {...state,...a};
-        //console.log("action", a);
+        console.log("action", a);
         
         if(a){
+            if("error"==a.error) {
+                state.errors.push(a);
+                state.errors = _.uniqWith(state.errors, _.isEqual);
+                console.log("add error state is:",state.errors);
+                return {...state};
+            }
+            if("dismiss"==a.error) {
+                state.errors = _.filter(state.errors, function(x) { return !_.isEqual(x, a.item) });
+                console.log("remove error state is:",state.errors,a.item);
+                return {...state};
+            }
             if("update"==a.balance ) {
                 getBalances(state);
             }
@@ -96,7 +109,7 @@ export function SMRT16Provider ({children}) {
     const handleAccountsChanged = (accounts)=> {
         const r = bdata;
         if (accounts.length === 0) {
-            console.log('MetaMask is locked or the user has not connected any accounts');
+            dispatch({reason:'MetaMask is locked or the user has not connected any accounts',error:"error"});
         } else if (accounts[0] !== r.addr) {
             
             r.addr = accounts[0];
@@ -111,7 +124,6 @@ export function SMRT16Provider ({children}) {
             getBalances(r).then(()=>{
                 getMisc(r);
             });
-            
         }
         dispatch(r);
       }
@@ -132,13 +144,13 @@ export function SMRT16Provider ({children}) {
                         dispatch(null);
                     });
                 r.ethereum.on('accountsChanged', handleAccountsChanged);
+            } else {
+                console.log("Ethereum not found");
+                
+              r.errors.push({reason:'Please, connect to MetaMask'});
+              r.myPageBtnMsg = 'Please, connect to MetaMask';
             }
-        } else {
-            console.log("Ethereum not found");
-            
-          r.errors.push({reason:'Please, connect to MetaMask'});
-          r.myPageBtnMsg = 'Please, connect to MetaMask';
-        }
+        } 
 
     },[]);
 

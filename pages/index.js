@@ -47,7 +47,6 @@ export default function IndexPage() {
             <GetStarted />
           </Col>
           <Col sm={12} lg={6} md={12}>
-            
             <BarsIllustration />
           </Col>
         </Row> 
