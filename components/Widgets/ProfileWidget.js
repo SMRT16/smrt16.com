@@ -4,7 +4,7 @@ import useLocalStorage from "use-local-storage";
 import Gravatar from "react-gravatar"
 import validator from "email-validator";
 import { SMRT16Context } from "../SMRT16Context";
-import { getUser, saveDBRecord } from "../Utils/user";
+import { saveDBRecord } from "../Utils/user";
 import { TheData } from "../Utils/data";
 import useSWR from "swr";
 
@@ -94,9 +94,7 @@ export default function ProfileWidget(props) {
     
 
     useEffect(() => {
-
-
-            console.log("getUser",data,error,apiUrl);
+            //console.log("getUser",data,error,apiUrl);
             if(data) {
                 if(data.name) {
                     setUserName(data.name);

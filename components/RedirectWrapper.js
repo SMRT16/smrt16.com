@@ -6,7 +6,10 @@ import { SMRT16Context } from "./SMRT16Context";
 import { ethers } from "ethers";
 import { TheData } from "./Utils/data";
 import { Skeleton } from "@mui/material";
-import { getUser } from "./Utils/user";
+import useSWR from "swr";
+
+
+const fetcher = (url) => fetch(url).then((res) => res.json());
 
 /**
  * Tasks:
@@ -34,6 +37,11 @@ export default function RedirectWrapper(props) {
 
     console.log("RedirectWrapper");
 
+    const apiUrl = TheData.APIuser+props.id;
+    const { udata, uerror } = useSWR(
+        apiUrl,
+        fetcher
+      );
 
 
 
@@ -90,15 +98,12 @@ export default function RedirectWrapper(props) {
                     console.log('To cache the referrer link and name in case there is nothing saved yet',buyFromLink,id);
                     if(context.r && context.r.addr && buyFromLink=='#' && id!=context.r.addr) {
                         setBuyfromLink(id);
-
-                        getUser({addr:id}).then((data)=>{
-                            if(!data.error) {
-                                console.log("getUser for setBuyfromName",data.name);
-                                if(data.name) setBuyfromName(data.name);
-                            } else {
-                                console.log("getUser error", data);
+                        if(udata) {
+                            if(udata.name) {
+                                setBuyfromName(udata.name);
                             }
-                        });
+                        }
+
                     }
                 } else {
                     // TODO:  1.2 and if there is no such a record in the DB (we might have custom links)
@@ -117,7 +122,7 @@ export default function RedirectWrapper(props) {
             console.log("let context to know about the navigation");
             context.SMRT16dispatch({id});
         }
-    },[context]);
+    },[context,udata]);
 
     return (
         <>
