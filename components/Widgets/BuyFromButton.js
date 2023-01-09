@@ -4,6 +4,7 @@ import axios from "axios";
 import { Button, Card, Collapse } from "react-bootstrap";
 import { TheData } from "../Utils/data";
 import { SMRT16Context } from "../SMRT16Context";
+import { Info, InfoCircle } from "react-bootstrap-icons";
 
 /**
  * 
@@ -89,8 +90,8 @@ export default function BuyFromButton(props) {
             </Button>
             
             <div className="smaller" style={{marginTop:"16px"}} >
-                <button onClick={() => setOpen(!open)}
-                    className="btn btn-sm light">Cached referral link</button> 
+                <button onClick={() => setOpen(!open)} title={TheData.rememberingRefLink}
+                    className="btn btn-sm light"><InfoCircle/> Cached referral link</button> 
                 <div id="resetLink" style={!open?{display:"none"}:{display:"block"}}>
                     {buyFromLink} &nbsp;<a href="#" onClick={handleReset}>reset</a> 
                 </div>

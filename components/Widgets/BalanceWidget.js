@@ -42,7 +42,7 @@ export default function BalanceWidget(props) {
         <Card.Title>Your available balances</Card.Title>
         <div>
             <Stack gap={2}>
-                <div style={{textAlign:"right"}}>
+                {context.r.ethereum ? <div style={{textAlign:"right"}}>
                     <a href={refLink} 
                         style={{fontSize:'66%'}}
                         className="btn btn-sm btn-outline-secondary smaller"
@@ -51,7 +51,7 @@ export default function BalanceWidget(props) {
                         onClick={handleRefresh}
                         className="btn btn-sm btn-outline-secondary smaller"
                         target="_blank">Refresh</button>
-                </div>
+                </div>:<><br/></>}
                 <Stack direction="horizontal" gap={3}>
                 
                     <div>
@@ -70,12 +70,14 @@ export default function BalanceWidget(props) {
                         <p><button className="btn btn-sm btn-outline-secondary" style={{fontSize:'66%'}}>Add asset</button></p>
                     </div> */}
                 </Stack>
-                {userUSDT=='0.0'?<p><b>Seems like you need to top up your USDT balance.</b></p>:<></>}
-                {userMATIC=='0.0'?<p><b>Seems like you have to refill your MATIC balance first.</b></p>:<></>}
+                {context.r.ethereum ? <>
+                    {userUSDT=='0.0'?<p><b>Seems like you need to top up your USDT balance.</b></p>:<></>}
+                    {userMATIC=='0.0'?<p><b>Seems like you have to refill your MATIC balance first.</b></p>:<></>}
+                </>:<>
+                    <p>Wallet is not connected</p>
+                </>}
+                
             </Stack>
-            
-
-            
         </div>
         
         

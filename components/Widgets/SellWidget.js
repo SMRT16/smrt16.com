@@ -23,7 +23,7 @@ export default function SellWidget(props) {
         <Card title="Sell Widget">
             <Card.Body>
                 <Card.Title>{TheData.sellTitle}</Card.Title>
-                {context.r.pcontract!='0x0000000000000000000000000000000000000000'?
+                {context.r.ethereum && context.r.pcontract!='0x0000000000000000000000000000000000000000'?
                 <Stack gap={4}>
                     <div style={{textAlign:"right"}}>
                         <CopyToClipboard text={refLink} onCopy={() => setCopyText(TheData.copiedToClipboad)} >

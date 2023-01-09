@@ -35,6 +35,7 @@
     "react-dom": "18.2.0",
     "react-ga4": "^1.4.1",
     "react-gravatar": "^2.6.3",
+    "react-hover-video-player": "^9.7.1",
     "react-markdown": "^8.0.4",
     "react-qr-code": "^2.0.8",
     "react-to-print": "^2.14.10",

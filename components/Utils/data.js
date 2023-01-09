@@ -525,6 +525,7 @@ So, the first step now is to approve some amount of USDT for SMRT16 contract to 
     hideQRcode:"Hide QR code",
     buyFrom:"Buy from",
     youDontHaveLink:"You don't have a referral link for this wallet.",
+    rememberingRefLink:"Referal link which you visited before",
     bonusSizeNote:"The size of your referral reward is limited by the size of your smrt16 tokens balance.",
     burningNote:"Every time you receive your referral reward, a small amount of smrt16 tokens is burned from your balance.",
     youNeedToBuy:"In order to have a referral link your wallet needs to be register in the Smart Contract and to make this happen you need to buy any amount of SMRT16 tokens from this wallet. ",
