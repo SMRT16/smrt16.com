@@ -1,7 +1,10 @@
+import useSWR from "swr";
+
+const fetcher = (url) => fetch(url).then((res) => res.json());
 
 
 export const getUser = async (uid)=>{
-    // TODO: replace firebase to api
+    
     return {};
 }
 

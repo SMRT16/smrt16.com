@@ -14,25 +14,25 @@ import { Masonry } from "@mui/lab";
 import { useRouter } from "next/router.js";
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
+import useSWR from "swr";
 
+
+const fetcher = (url) => fetch(url).then((res) => res.json());
 
 export default function FAQPage() {
     const context = useContext(SMRT16Context);
-    const [data, setData] = useState(null);
+    //const [data, setData] = useState(null);
     const router = useRouter();
     const [anc,setAnc] = useState('');
 
-    console.log('Au?');
+    const { data, errorFaqs } = useSWR(
+        (TheData.APIfaq),
+        fetcher
+      );
 
     useEffect(()=>{
-
+        console.log('faq',data,errorFaqs);
         context.SMRT16dispatch({id:"faq"});
-
-        fetch('/api/faq')
-        .then((res) => res.json())
-        .then((data) => {
-            setData(data);
-        })
         setAnc(router.asPath.split('#')[1]);
         
     },[]);

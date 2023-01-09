@@ -1,5 +1,5 @@
 export const TheData = {
-  "version":"0.34",
+  "version":"0.35",
 
     "projInfo":{
 
@@ -534,5 +534,7 @@ So, the first step now is to approve some amount of USDT for SMRT16 contract to 
 
     "APIgetWalletTokenTransfers":"https://us-central1-smrt16-d1904.cloudfunctions.net/s/getWalletTokenTransfers/",
     "APIgetLast0":"https://us-central1-smrt16-d1904.cloudfunctions.net/s/getLast0?me=",
+    "APIuser":"https://us-central1-smrt16-d1904.cloudfunctions.net/s/user/",
+    "APIfaq":"https://us-central1-smrt16-d1904.cloudfunctions.net/s/faq",
     defaultAmountToBuy:100,
 };

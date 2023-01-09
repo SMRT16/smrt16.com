@@ -5,8 +5,11 @@ import Gravatar from "react-gravatar"
 import validator from "email-validator";
 import { SMRT16Context } from "../SMRT16Context";
 import { getUser, saveDBRecord } from "../Utils/user";
+import { TheData } from "../Utils/data";
+import useSWR from "swr";
 
 
+const fetcher = (url) => fetch(url).then((res) => res.json());
 
 /**
  * 
@@ -16,9 +19,14 @@ import { getUser, saveDBRecord } from "../Utils/user";
  */
 export default function ProfileWidget(props) {
     const context = useContext(SMRT16Context);
+    const apiUrl = TheData.APIuser+context.r.addr;
+    const { data, error } = useSWR(
+        apiUrl,
+        fetcher
+      );
 
-    const [userName, setUserName] = useLocalStorage('userName','');
-    const [userEmail, setUserEmail] = useLocalStorage('userEmail','');
+    const [userName, setUserName] = useLocalStorage(context.r.addr+'userName','');
+    const [userEmail, setUserEmail] = useLocalStorage(context.r.addr+'userEmail','');
 
     const [nameColor, setNameColor] = useState('white');
     const [emailColor, setEmailColor] = useState('white');
@@ -32,11 +40,8 @@ export default function ProfileWidget(props) {
 
     const [errorMsg, setErrorMsg] = useState(<>&nbsp;</>);
 
+    
    
-
-
-
-
 
     const handleNameSave = async ()=> {
         setNameColor('white');
@@ -86,20 +91,22 @@ export default function ProfileWidget(props) {
         }
     }
 
+    
+
     useEffect(() => {
 
-            getUser({ addr: context.r.addr })
-                .then((data) => {
-                    if(data.error) {
-                        setErrorMsg(data.error);
-                    } else {
-                        if(data.email) setUserEmail(data.email);
-                        if(data.name) setUserName(data.name);
-                    }
-                    setEmailMsg(data.text);
-                });
 
-    },[]);
+            console.log("getUser",data,error,apiUrl);
+            if(data) {
+                if(data.name) {
+                    setUserName(data.name);
+                }
+                if(data.email) {
+                    setUserEmail(data.email);
+                }
+            }
+
+    },[data,error]);
 
 
 
