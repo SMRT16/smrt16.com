@@ -8,7 +8,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "export": "next build && next export"
+    "export": "next build && next export",
+    "deploy-firebase": "git pull && next build  && next export && firebase deploy --only hosting"
   },
   "dependencies": {
     "@emotion/react": "^11.10.5",
@@ -41,6 +42,7 @@
     "react-to-print": "^2.14.10",
     "remark-gfm": "^3.0.1",
     "sass": "^1.57.1",
+    "swr": "^2.0.0",
     "use-local-storage": "^2.3.6"
   }
 }
