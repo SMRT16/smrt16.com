@@ -5,6 +5,8 @@ import Footer from "../components/Footer.js";
 import Header from "../components/Header/Header.js";
 import Topbar from "../components/Header/Topbar.js";
 
+
+
 import { Card, Col, Row } from "react-bootstrap";
 import { TheData } from "../components/Utils/data.js";
 
@@ -23,7 +25,7 @@ export default function FAQPage() {
     const context = useContext(SMRT16Context);
     //const [data, setData] = useState(null);
     const router = useRouter();
-    const [anc,setAnc] = useState('');
+    //const [anc,setAnc] = useState('');
 
     const { data, errorFaqs } = useSWR(
         (TheData.APIfaq),
@@ -31,11 +33,31 @@ export default function FAQPage() {
       );
 
     useEffect(()=>{
-        console.log('faq',data,errorFaqs);
         context.SMRT16dispatch({id:"faq"});
-        setAnc(router.asPath.split('#')[1]);
+        setHash(router.asPath.split('#')[1]);
         
     },[]);
+
+  const [anc, setHash] = useState('')
+
+  const updateHash = (str) => {
+    if (!str) return
+    setHash(str.split('#')[1])
+  }
+
+  useEffect(() => {
+    const onWindowHashChange = () => updateHash(window.location.hash)
+    const onNextJSHashChange = (url) => updateHash(url)
+
+    router.events.on('hashChangeStart', onNextJSHashChange)
+    window.addEventListener('hashchange', onWindowHashChange)
+    window.addEventListener('load', onWindowHashChange)
+    return () => {
+      router.events.off('hashChangeStart', onNextJSHashChange)
+      window.removeEventListener('load', onWindowHashChange)
+      window.removeEventListener('hashchange', onWindowHashChange)
+    }
+  }, [router.asPath, router.events])
 
 
   
@@ -55,8 +77,8 @@ export default function FAQPage() {
                 {data?<>
                 <Masonry columns={{ xs: 1, sm: 2, lg:3, xl:4 }} spacing={2}>
                     {data.map((item, index) => (
-                        <div key={index} className="no-overflow" id={item.id}>
-                            <Card style={anc==item.id?{background:"#eefae3"}:{background:"white"}}>
+                        <div key={index} className="no-overflow" id={item.id} title={"#"+item.id} >
+                            <Card style={anc==item.id?{background:"#2C70F433"}:{background:"white"}}>
                                 <Card.Body>
                                     <Card.Title>{item.question}</Card.Title>
                                     <ReactMarkdown children={item.answer} remarkPlugins={[remarkGfm]} />

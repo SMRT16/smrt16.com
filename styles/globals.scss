@@ -5,7 +5,12 @@ body {
   margin: 0;
   font-family: 'Lato', sans-serif;
   height: 100vh;
-  color: #333;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px;
+  /* or 175% */
+  color: #5D6180;
   background-image: url("/bg.svg");
   background-repeat: no-repeat;
   background-position: 100% 80px;
@@ -217,8 +222,10 @@ p, p i, a {
 
 .card {
   border: 0px;
-  box-shadow: 0px 8px 40px -2px rgba(6, 12, 59, 0.08);
-  margin: 16px;
+  // box-shadow: 0px 8px 40px -2px rgba(6, 12, 59, 0.08);
+  box-shadow: 0px 0px 8px 4px rgba(126, 126, 126, 0.08);
+  border-radius: 12px;
+  margin:8px;
 }
 
 
@@ -297,15 +304,81 @@ ol.indexList li:before {
     
 }
 
+.sText {
+
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px;
+  /* or 175% */
+  color: #5D6180;
+  text-align: justify;
+}
+
+
+.videoIllustration {
+  max-width:568px;
+  margin: 0px 0px 0px auto;
+  @media (width <= 768px) {
+    margin: auto;
+  }
+}
+
 #index {
   font-family: "Avenir";
 
-  .card {
-    padding-left: 0px;
-    background-color: transparent;
-    box-shadow: none;
-    
+  margin-top: 88px;
+
+  h1 {
+    font-family: 'Plus Jakarta Sans';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 42px;
+    line-height: 58px;
+    color: #060C3C;
+    margin: 12px 0px;
   }
+  h2 {
+    font-family: 'Plus Jakarta Sans';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 42px;
+    line-height: 28px;
+    /* or 67% */
+
+    text-align: center;
+
+    color: #000000;
+    margin: 48px auto;
+  }
+
+  @media (width <= 768px) {
+    h1 {
+      font-size: 26px;
+    }
+    margin-top: 18px;
+  }
+
+  h3 {
+    font-family: 'Plus Jakarta Sans';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 28px;
+    /* or 156% */
+    margin: 100px auto;
+    text-align: center;
+
+    color: #000000;
+    max-width: 858px;
+    @media (width <= 768px) {
+      margin: 32px auto;
+      font-style: normal;
+      font-size: 15px;
+      line-height: 26px;
+    }
+  }
+
   
   .levels {
     margin-top: 32px; 
@@ -324,15 +397,53 @@ ol.indexList li:before {
   
   }
   
-  .indexTitle {
-    color: black;
-    font-size: 50px;
-  }
-  
-  .shift {
-    margin-left: 2.5em;
-  }
+  // .shift {
+  //   margin-left: 2.5em;
+  // }
 
+}
+
+.blueBox {
+  margin: 80px auto;
+  background:#2C70F433;
+}
+
+.blueBox div.indexText {
+  max-width: 920px;
+  margin: auto;
+  text-align: center;
+}
+
+.blueBox div.indexText p {
+  text-align: center;
+}
+
+#getstarted, #getstarted3 {
+  text-align: center;
+}
+
+#getstarted3 {
+  margin: 48px 0px 0px  0px;
+}
+
+.index3 {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 30px;
+  
+  /* or 93% */
+
+  text-align: center;
+
+  color: #FFFFFF;
+  width: 52px; height: 52px;
+  line-height: 50px;
+  background: #8BADF9;
+  
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  margin: 20px auto;
 }
 
 

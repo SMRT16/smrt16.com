@@ -12,7 +12,7 @@ export default function Topbar(props) {
   return (
       <header>
         <Navbar expand="lg">
-          <Container>
+          <Container style={{padding:"0px 12px"}}>
             <Navbar.Brand href="/"><Image
                         src="/assets/smrt16-with-text-logo.png"
                         alt="SMRT16"

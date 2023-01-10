@@ -1,4 +1,4 @@
-import { Card } from "react-bootstrap";
+import { Card, Col } from "react-bootstrap";
 import CurrencyInput from "react-currency-input-field";
 import {
     Chart as ChartJS,
@@ -61,17 +61,10 @@ export default function BarsIllustration(props) {
         return x+x**2+x**3+x**4;
       }
 return (
-
-    <div {...otherProps}>
-              <Card>
-                
-                <Card.Body>
-                <Card.Title>
-                  Assumption caclulator of a possible income
-                </Card.Title>
-                  <p><u>Try to enter your numbers:</u></p>
-                  
-                  <div className="cols2"><div><label htmlFor="Average">Average purchase USDT</label></div> 
+<>
+  <Col sm={12} lg={6} md={12} {...otherProps}>
+            <h4>Try to enter your numbers:</h4>
+            <div className="cols2"><div><label htmlFor="Average">Average purchase USDT</label></div> 
                     <div>
                       <CurrencyInput style={{width:"60px"}}
                             decimalsLimit={2}
@@ -111,10 +104,12 @@ return (
                       }
                     }/>
                   </div>
-                  <p className="indexText">
-                    Let's assume that your referrals with do everything the same with you: 
-                    invest the same amount and invite the same number of referrals. Then, see the following picture below.
-                  </p>
+          </Col>
+  <Col sm={12} lg={6} md={12} {...otherProps}>
+          <p className="indexText">
+            Let's assume that your referrals with do everything the same with you: 
+            invest the same amount and invite the same number of referrals. Then, see the following picture below.
+          </p>
                   <ul>
                   <li>{dataBars[0]} USDT from {refCount} participats on the first level</li>
                   <li>{dataBars[1]} USDT from {refCount**2} participats on the second level</li>
@@ -126,9 +121,7 @@ return (
                   <div>
                     {children}
                   </div>
-                </Card.Body>
-              </Card>
-
-            </div>
+  </Col>
+</>
 );
 }

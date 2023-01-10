@@ -5,8 +5,8 @@ export default function VideoIllustration(props) {
     const { children, ...otherProps } = props;
 
     return (
-        <div {...otherProps} style={{maxWidth:"540px"}}>
-            <Card>
+        <div {...otherProps} className="videoIllustration">
+
                 <HoverVideoPlayer videoSrc={[
                     {src:"/SMRT16-index.webm",type:"video/webm"},
                     {src:"/SMRT16-index.mp4",type:"video/mp4"}
@@ -24,15 +24,7 @@ export default function VideoIllustration(props) {
                     />
                   }
                 />
-                {/* <Card.Img variant="back" src="video.png"></Card.Img>
-                <Card.ImgOverlay>
-                    <video controls style={{width:"100%"}}>
-                        <source src="/SMRT16-index.mp4" type="video/mp4"/>
-                    </video>
-                </Card.ImgOverlay> */}
-                
-                
-            </Card>
+
         </div>
         
     );

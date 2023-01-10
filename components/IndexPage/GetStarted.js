@@ -3,10 +3,10 @@ import { Card } from "react-bootstrap";
 export default function GetStarted(props) {
     const { children, ...otherProps } = props;
 return (
-    <div {...otherProps} id="getstarted">
+    <div {...otherProps} >
         <Card>
             <Card.Body>
-              <Card.Title as="h1">What do you need to <b>get started</b>?</Card.Title>
+              
               <div className="indexText">
                 <ol className="indexList">
                     <li><b>Purchase MATICs and USDT.</b> <a href="/faq#usdt">What&nbsp;is&nbsp;USDT?</a>

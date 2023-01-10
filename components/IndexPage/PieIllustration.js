@@ -18,9 +18,10 @@ export default function PieIllustration(props) {
       };
     return(
         <div {...otherProps}>
+          <h2>93.75% of the token sales paid out as referral bonuses</h2>
           <Card>
             <Card.Body>
-              <Card.Title as="h2">93.75% of the token sales paid out as referral bonuses</Card.Title>
+              
               <Pie style={{maxWidth:"400px",maxHeight:"400px",margin:"32px auto", width:"100%", height:"100%"}} data={data} />
               <p className="levels">
                 &nbsp;<span style={{color:"#2C70F4"}}>&#11044;</span>Level&nbsp;1&nbsp;
