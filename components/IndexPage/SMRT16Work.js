@@ -1,7 +1,9 @@
-import { Button, Card } from "react-bootstrap";
+import { useState } from "react";
+import { Button, Card, Collapse } from "react-bootstrap";
 
 export default function SMRT16Work(props) {
   const { children, ...otherProps } = props;
+  const [open, setOpen] = useState(false);
 
     return (
       <div {...otherProps}>
@@ -18,15 +20,23 @@ export default function SMRT16Work(props) {
             <li>2nd is <u>25.0%</u> or <b>1/4</b></li>
             <li>3rd  is <u>12.5%</u> or <b>1/8</b></li>
             <li>4th  is <u>6.25%</u> or <b>1/16</b></li>
-            of your referral transaction amount.&nbsp;<Button variant="link">Read more</Button>
+            of your referral transaction amount.&nbsp;<Button variant="link" 
+            onClick={() => setOpen(!open)}
+            aria-controls="w-collapse-text"
+            aria-expanded={open}>Read more</Button>
           </ul>
-          <p>
-          Partners of the SMTR16 project are highly motivated to engage in marketing - after all, 
-          referral bonuses are paid instantly. 
-          But let's say a user wants to invest, get a few referrals, and then switch to something else. 
-          And what? His referral program is not going anywhere. 
-          It will work for a year or two and always make a profit, as long as the smart contract on the blockchain works.
-          </p>
+          <Collapse in={open}>
+            <div id="w-collapse-text">
+              <p>
+              Partners of the SMTR16 project are highly motivated to engage in marketing - after all, 
+              referral bonuses are paid instantly. 
+              But let's say a user wants to invest, get a few referrals, and then switch to something else. 
+              And what? His referral program is not going anywhere. 
+              It will work for a year or two and always make a profit, as long as the smart contract on the blockchain works.
+              </p>
+            </div>
+          </Collapse>
+          
         </div>
         
         

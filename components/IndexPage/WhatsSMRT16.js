@@ -8,15 +8,13 @@ export default function WhatsSMRT16(props) {
         
         <div className="sText">
                 <p >
-                This is a crypto token of the ERC20 standard in the Polygon network. 
+                SMRT16 is a crypto token that adheres to the ERC20 standard and operates on the Polygon network. 
                 </p>
                 <p style={{fontWeight:"500", color:"black"}}>
                 You may be interested in purchasing SMRT16 due to the properties of this token.
                 </p>
                 <p>
-                First of all, it is a unique four level referral program built into the Smart Contract token sale.
-                Thanks to it, decentralization of project marketing is achieved.<br/> 
-                Secondly, SMRT16 implements a decentralized idea that operates exclusively on-chain without external management involvement.
+                  It features a four-level referral program built into its Smart Contract token sale, which aims to decentralize project marketing. The token operates on-chain, with no external management involvement. The goal of the project is to attract attention and generate financial benefits for token holders through funding from token sales and marketing bonuses.
                 </p>
                 <p>
                 The project's objective is to get people's attention, which will then be capitalized on for ongoing financial advantage for the token holders. 

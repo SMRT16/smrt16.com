@@ -76,11 +76,12 @@ export default function IndexPage() {
           </Col>
         </Row>
         <Row id="getstarted3">
-          <Col sm={12} lg={4} md={12}>
+          <Col sm={12} lg={4} md={12} style={{display:"flex"}}>
             <Card>
               <Card.Body>
                 <div className="index3">1</div>
                 <Card.Title>Purchase MATICs and USDT</Card.Title>
+                <a href="/faq#usdt">What is USDT?</a>
                 <Card.Text>The SMRT16 smart contract runs at Polygon, where you need MATIC tokens to pay the transaction fee.
                   And also you get SMRT16 tokens in exchange for USDT, and later you get your referral rewards in this crypto representation of US dollars.
                 </Card.Text>
@@ -88,7 +89,7 @@ export default function IndexPage() {
             </Card>
           </Col>
           
-          <Col sm={12} lg={4} md={12}>
+          <Col sm={12} lg={4} md={12} style={{display:"flex"}}>
           <Card>
               <Card.Body>
                 <div className="index3">2</div>
@@ -102,7 +103,7 @@ export default function IndexPage() {
             </Card>
           </Col>
 
-          <Col sm={12} lg={4} md={12}>
+          <Col sm={12} lg={4} md={12} style={{display:"flex"}}>
             <Card>
               <Card.Body>
                 <div className="index3">3</div>
@@ -117,13 +118,12 @@ export default function IndexPage() {
           </Col>
         </Row>
         <Row>
-          <Col>
-            <h2>Assumption calculator of a possible income</h2>
+          <Col id="assuption">
+            <h4 >Assumption calculator of a possible income</h4>
           </Col>
         </Row>
 
         <Row>
-          
           <BarsIllustration />
         </Row> 
 

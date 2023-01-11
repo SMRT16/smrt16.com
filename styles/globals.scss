@@ -379,10 +379,47 @@ ol.indexList li:before {
     }
   }
 
+  h4 {
+    font-family: 'Plus Jakarta Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    /* or 138% */
+
+    text-align: center;
+    margin: 32px auto;
+
+    /* Greyscale/Dark Grey */
+
+    color: #060C3C;
+    @media (width <= 768px) {
+      margin: 32px auto;
+      font-style: normal;
+      font-size: 15px;
+      line-height: 26px;
+    }
+  }
+  h5 {
+    font-family: 'Plus Jakarta Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 28px;
+    /* identical to box height, or 175% */
+
+    text-align: left;
+
+    color: #000000;
+  }
+
   
   .levels {
     margin-top: 32px; 
     font-size: 80%;
+    max-width: 450px;
+    text-align: center;
+    margin: auto;
   }
   
   .indexText {
@@ -397,10 +434,26 @@ ol.indexList li:before {
   
   }
   
-  // .shift {
-  //   margin-left: 2.5em;
-  // }
+}
 
+
+
+#inputHolder {
+  margin-left: 40px;
+  margin-bottom: 26px;
+  input {
+    border: 0.5px solid #5D6180;
+    border-radius: 6px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+    padding: 4px;
+
+    /* Greyscale/Grey */
+
+    color: #5D6180;
+  }
 }
 
 .blueBox {
@@ -458,4 +511,28 @@ ol.indexList li:before {
   .chartIllustration {
     padding: 0px;
   } 
+}
+
+#assuption h4 {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 42px;
+  line-height: 28px;
+  /* or 67% */
+
+  text-align: center;
+
+  color: #000000;
+  margin: 120px auto 48px auto;
+  @media (width <= 768px) {
+    margin: 32px auto;
+    font-style: normal;
+    font-size: 15px;
+    line-height: 26px;
+  }
+}
+
+#barstext {
+  margin-top: 48px;
 }
