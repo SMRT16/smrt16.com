@@ -9,7 +9,7 @@
     "start": "next start",
     "lint": "next lint",
     "export": "next build && next export",
-    "deploy-firebase": "next build  && next export && firebase deploy --only hosting"
+    "deploy-firebase": "git submodule update --recursive --remote && next build  && next export && firebase deploy --only hosting"
   },
   "dependencies": {
     "@emotion/react": "^11.10.5",
