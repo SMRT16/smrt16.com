@@ -5,7 +5,7 @@ export default function VideoIllustration(props) {
     const { children, ...otherProps } = props;
 
     return (
-        <div {...otherProps} className="videoIllustration">
+        <div {...otherProps} className="notvideoIllustration">
 
                 {/* <HoverVideoPlayer videoSrc={[
                     {src:"/SMRT16-index.webm",type:"video/webm"},
@@ -24,8 +24,6 @@ export default function VideoIllustration(props) {
                     />
                   }
                 /> */}
-
-                <h4>Main points to remember!</h4>
                 <ul>
                   <li>Spend USDT, receive USDT</li>
                   <li>It's Polygon main net USDT</li>
@@ -36,9 +34,12 @@ export default function VideoIllustration(props) {
                   <li>But maximum amount you receive is limited to your SMRT16 balance</li>
                   <li>You spend SMRT16 by receiving referral rewards</li>
                 </ul>
+
                 <div style={{margin:"auto",textAlign:"center"}}>
-                  <Button as="a" href="/0">LET'S GET STARTED</Button>
+                <h4>Designed for those who have friends with whom they can share their love of crypto</h4>
+                  <Button as="a" href="/0">Just try it out! You’ll fall in love</Button>
                 </div>
+                
                 
         </div>
         
