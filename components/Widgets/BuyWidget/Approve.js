@@ -58,6 +58,7 @@ export default function Approve(props) {
         const r = props.bdata;
         console.log('handleActionApprove',r);
         let finalAmount = amount*10**r.usdtDecimals;
+        
         let approvedAmount = 0;
         try {
             console.log("r.addr,r.smrt16ContractAddr",r.addr,r.smrt16ContractAddr);
@@ -65,11 +66,11 @@ export default function Approve(props) {
             console.log("r.bdata.allowance", allowance);
             approvedAmount = +allowance.toString();
             console.log("approvedAmount", approvedAmount);
-
             
         } catch(ex) {
             console.log("Checking approvement",ex);
         }
+
         console.log("finalAmount",finalAmount);
         if(finalAmount<=approvedAmount) {
             setReceipt({status:"ok", message: "Already have enough allowance to continue"});

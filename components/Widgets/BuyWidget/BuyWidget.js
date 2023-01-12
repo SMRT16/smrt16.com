@@ -14,9 +14,9 @@ import Buy from "./Buy";
  */
 export default function BuyWidget(props) {
     const context = useContext(SMRT16Context);
-    const myreferrer=context.r.referrer;
-    const bdata=context.r;
-    
+    const myreferrer = context.r.referrer;
+    const bdata = context.r;
+
     const [allowanceAmount, setAllowanceAmount] = useState(0);
 
     // TODO: seems can be optimized/moved to Approve
@@ -35,32 +35,32 @@ export default function BuyWidget(props) {
 
     const [errorMessage, setErrorMessage] = useState('');
 
-  
+
 
 
 
     const getAllowance = async () => {
-        bdata.allowance = await context.r.contractUSDT.allowance(context.r.addr,context.r.smrt16ContractAddr);
+        bdata.allowance = await context.r.contractUSDT.allowance(context.r.addr, context.r.smrt16ContractAddr);
         console.log("getAllowance", bdata.allowance, bdata.allowance.toString());
         return bdata.allowance.toString();
     }
 
-    const asyncLoader = async ()=> {
+    const asyncLoader = async () => {
         const allowance = await getAllowance();
-        console.log("Got allowance",allowance);
+        console.log("Got allowance", allowance);
         setAllowanceAmount(allowance);
     }
 
     const onApproveResult = (arg1, arg2) => {
-        console.log("onApproveResult - set next step",arg1, arg2);
+        console.log("onApproveResult - set next step", arg1, arg2);
         setAmount(arg2);
         setStep('buy');
         return;
     }
 
     const onBuyResult = (arg1, arg2) => {
-        console.log("onBuyResult",arg1,arg2);
-        if("approved"==arg1 && "back"==arg2) {
+        console.log("onBuyResult", arg1, arg2);
+        if ("approved" == arg1 && "back" == arg2) {
             setStep('approve');
         } else {
             setStep('results');
@@ -69,43 +69,43 @@ export default function BuyWidget(props) {
         }
     }
 
-    useEffect(()=>{
+    useEffect(() => {
         asyncLoader();
-    },[allowanceAmount]);
+    }, [allowanceAmount]);
 
-//First, you must give permission to the smart contract to perform an operation with your USDTs. According to the algorithm, the purchase amount is divided into 1/2, 1/4,1/8 and 1/16 and goes to referral payments.
+    //First, you must give permission to the smart contract to perform an operation with your USDTs. According to the algorithm, the purchase amount is divided into 1/2, 1/4,1/8 and 1/16 and goes to referral payments.
     return (
         <Card title="Buy Widget">
             <Card.Body>
-                {/* <Card.Img variant="top" src={"/"+step+".svg"}/> */}
-            <Card.Title>Buy SMRT16 Tokens</Card.Title>
-            <div>
-                {step && TheData['BuyWidgetT'+step]}
-                <hr/>
-            </div>
-            {!step?<Skeleton count={4} />:<>
+                <Card.Title>Buy SMRT16 Tokens</Card.Title>
+                <div>
+                    {step && TheData['BuyWidgetT' + step]}
+                    <hr />
+                </div>
+                {!step ? <Skeleton count={4} /> : <>
 
-  
-                {{  approve:  <Approve onResult={onApproveResult}  bdata={bdata} />,
-                    buy: <Buy onResult={onBuyResult}  bdata={bdata} />,
-                    results: <>
-                                {tx?
-                                    <div>
-                                    Transaction Hash: <u><a title="Opens in a new window" target="_blank" 
-                                                                                href={TheData.txScan+tx}>{tx}</a></u>
-                                    </div>
-                                    :
-                                    <div>
-                                        <a href='/1'>Go to "My page" to see how to sell</a>
-                                    </div>
-                                }
-                            </>
-                 }[step]
-                }   
-                
-            </>}
-        </Card.Body>
-            
+                    {{
+                        approve: <Approve onResult={onApproveResult} bdata={bdata} />,
+                        buy: <Buy onResult={onBuyResult} bdata={bdata} />,
+                        results: <>
+                            {tx ?
+                                <div>
+                                    Transaction Hash: <u><a title="Opens in a new window" target="_blank"
+                                        href={TheData.txScan + tx}>{tx}</a></u>
+                                </div>
+                                :
+                                <div>
+                                    <a href='/1'>Go to "My page" to see how to sell</a>
+                                </div>
+                            }
+                        </>
+                    }[step]
+                    }
+
+                </>}
+
+            </Card.Body>
+
         </Card>
     );
 }

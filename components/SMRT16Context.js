@@ -120,7 +120,7 @@ export function SMRT16Provider ({children}) {
         if (accounts.length === 0) {
             dispatch({reason:'MetaMask is locked or the user has not connected any accounts',error:"error"});
         } else if (accounts[0] !== r.addr) {
-            
+            r.isPolygon = window.ethereum.networkVersion == 137;
             r.addr = accounts[0];
             r.isMyPage = (''+r.addr).toLocaleLowerCase()==(r.id+'').toLocaleLowerCase();
             //console.log("-----------eth_accounts update",r.isMyPage,r.addr,r.id);
@@ -143,8 +143,17 @@ export function SMRT16Provider ({children}) {
         if(!r.ethereum) {
             if(window && window.ethereum) {
                 r.ethereum = window.ethereum;
-                console.log("ethereum found",window.ethereum.networkVersion);
+                //console.log("ethereum found",window.ethereum.networkVersion);
                 r.isPolygon = window.ethereum.networkVersion == 137;
+                r.ethereum.request({ method: 'eth_chainId' }).then((chainId)=>{
+                    console.log("method: 'eth_chainId'",chainId);
+                    r.ethereum.on('chainChanged', (_chainId) => window.location.reload());
+                }).catch((eth_chainIderror)=>{
+                    console.log('eth_chainId',eth_chainIderror);
+                    // r.errors .push(error);
+                    // dispatch(null);
+                });
+                
 
                 r.ethereum.request({ method: 'eth_requestAccounts' })
                     .then(handleAccountsChanged)
