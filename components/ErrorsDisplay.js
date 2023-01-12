@@ -4,7 +4,7 @@ import { Alert } from "react-bootstrap";
 import { SMRT16Context } from "./SMRT16Context";
 
 export default function ErrorsDisplay () {
-    const [errors, setErrors] = useState([]);
+ 
     const {r,SMRT16dispatch} = useContext(SMRT16Context);
 
     const dismissError = (item) =>{
@@ -23,7 +23,7 @@ export default function ErrorsDisplay () {
               {r.errors.map((item,index)=>{
                 return (
                 <Alert key={index} variant="danger" onClose={()=>{dismissError(item)}} dismissible>
-                    {item.reason}
+                    {item.reason || item.message}
                 </Alert>
               );
               })}

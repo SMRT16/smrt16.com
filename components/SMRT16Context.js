@@ -19,12 +19,13 @@ export function SMRT16Provider ({children}) {
                 } else {
                     r.referrer = '';
                 }
-            } catch(exmisc) {
-                r.errors.push(exmisc);
+                console.log("got misc", r);
+                dispatch(r);
+                return true;
+            } catch(exgmisc) {
+                console.log('exgmisc',exgmisc);
+                //r.errors .push(exgmisc);
             }
-          console.log("got misc", r);
-          dispatch(r);
-          return true;
         }
         return false;
     }
@@ -36,7 +37,8 @@ export function SMRT16Provider ({children}) {
                 r.usdtBalance = await r.contractUSDT.balanceOf(r.addr);
                 r.usdt = ethers.utils.formatUnits(r.usdtBalance, r.usdtDecimals);
             } catch(exusdt) {
-                r.errors.push(exusdt);
+                console.log("exusdt",exusdt);
+                //r.errors .push(exusdt);
             }
           
             try {
@@ -44,13 +46,15 @@ export function SMRT16Provider ({children}) {
                 r.smrtBalance = await r.contractSMRT.balanceOf(r.addr);
                 r.smrt16 = ethers.utils.formatUnits(r.smrtBalance, r.smrtDecimals);
             } catch (exsmrt) {
-                r.errors.push(exsmrt);
+                console.log("exsmrt",exsmrt);
+                //r.errors .push(exsmrt);
             }
             try {
                 const balance = await r.provider.getBalance(r.addr)
                 r.matic = ethers.utils.formatEther(balance)
             } catch (exmatic) {
-                r.errors.push(exmatic);
+                console.log("exmatic",exmatic);
+                //r.errors .push(exmatic);
             }
 
             try {
@@ -62,7 +66,8 @@ export function SMRT16Provider ({children}) {
                     r.referrer = '';
                 }
             } catch(exmisc) {
-                r.errors.push(exmisc);
+                console.log("exmisc",exmisc);
+                //r.errors .push(exmisc);
             }
           console.log("got balances", r);
           dispatch(r);
@@ -75,10 +80,14 @@ export function SMRT16Provider ({children}) {
     const reducer = (state, a) => {
 
         const r = {...state,...a};
-        console.log("action", a);
+        //console.log("action", a, r);
         
         if(a){
             if("error"==a.error) {
+                if("CALL_EXCEPTION"==a.code) {
+                    console.log("CALL_EXCEPTION",a);
+                    return state;
+                }
                 state.errors.push(a);
                 state.errors = _.uniqWith(state.errors, _.isEqual);
                 console.log("add error state is:",state.errors);
@@ -140,8 +149,9 @@ export function SMRT16Provider ({children}) {
                 r.ethereum.request({ method: 'eth_requestAccounts' })
                     .then(handleAccountsChanged)
                     .catch((error)=>{
-                        r.errors.push(error);
-                        dispatch(null);
+                        console.log('r.ethereum.request',error);
+                        // r.errors .push(error);
+                        // dispatch(null);
                     });
                 r.ethereum.on('accountsChanged', handleAccountsChanged);
             } else {
