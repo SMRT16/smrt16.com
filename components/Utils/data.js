@@ -1,5 +1,5 @@
 export const TheData = {
-  "version":"0.38",
+  "version":"0.39",
 
     "projInfo":{
 
@@ -532,9 +532,11 @@ So, the first step now is to approve some amount of USDT for SMRT16 contract to 
     yourReferralLinkExpl:"Let your referrals to buy SMRT16 tokens from the page of this link.",
     PolygonNotConnected:"Your wallet is not connected to Polygon!",
 
-    "APIgetWalletTokenTransfers":"https://us-central1-smrt16-d1904.cloudfunctions.net/s/getWalletTokenTransfers/",
+    "APIgetWalletTokenTransfers":"https://us-central1-smrt16-d1904.cloudfunctions.net/s/walletTokenTransfers/",
     "APIgetLast0":"https://us-central1-smrt16-d1904.cloudfunctions.net/s/getLast0?me=",
     "APIuser":"https://us-central1-smrt16-d1904.cloudfunctions.net/s/user/",
     "APIfaq":"https://us-central1-smrt16-d1904.cloudfunctions.net/s/faq",
     defaultAmountToBuy:100,
 };
+
+export const fetcher = (url) => fetch(url).then((res) => res.json());

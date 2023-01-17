@@ -5,11 +5,9 @@ import Gravatar from "react-gravatar"
 import validator from "email-validator";
 import { SMRT16Context } from "../SMRT16Context";
 import { saveDBRecord } from "../Utils/user";
-import { TheData } from "../Utils/data";
+import { fetcher, TheData } from "../Utils/data";
 import useSWR from "swr";
 
-
-const fetcher = (url) => fetch(url).then((res) => res.json());
 
 /**
  * 

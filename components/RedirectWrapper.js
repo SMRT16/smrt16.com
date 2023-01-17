@@ -4,12 +4,11 @@ import useLocalStorage from "use-local-storage";
 import axios from "axios";
 import { SMRT16Context } from "./SMRT16Context";
 import { ethers } from "ethers";
-import { TheData } from "./Utils/data";
+import { fetcher, TheData } from "./Utils/data";
 import { Skeleton } from "@mui/material";
 import useSWR from "swr";
 
 
-const fetcher = (url) => fetch(url).then((res) => res.json());
 
 /**
  * Tasks:

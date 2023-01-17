@@ -8,7 +8,7 @@ import Topbar from "../components/Header/Topbar.js";
 
 
 import { Card, Col, Row } from "react-bootstrap";
-import { TheData } from "../components/Utils/data.js";
+import { fetcher, TheData } from "../components/Utils/data.js";
 
 import { SMRT16Context } from "../components/SMRT16Context.js";
 import { Skeleton } from "@mui/material";
@@ -19,13 +19,10 @@ import remarkGfm from 'remark-gfm';
 import useSWR from "swr";
 
 
-const fetcher = (url) => fetch(url).then((res) => res.json());
 
 export default function FAQPage() {
     const context = useContext(SMRT16Context);
-    //const [data, setData] = useState(null);
     const router = useRouter();
-    //const [anc,setAnc] = useState('');
 
     const { data, errorFaqs } = useSWR(
         (TheData.APIfaq),
