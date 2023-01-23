@@ -35,7 +35,8 @@ export default function IndexPage() {
         <Row>
           <Col>
             <h3>
-                The mission of the SMRT16 project is to show that entire decentralized organizations can exist on the blockchain that do not require human management.
+            The goal of the SMRT16 project is to demonstrate that fully decentralized organizations 
+            can be created and operate on the blockchain without the need for human management.
             </h3>
           </Col>
         </Row>
@@ -57,11 +58,12 @@ export default function IndexPage() {
             <Card className="blueBox">
               <Card.Body>
                 <div className="indexText">
-                  <p><b>Referral links in SMRT16 works as follows:</b> everyone who has ever bought a SMRT16 token through a DApp or directly using the functions of a smart contract becomes a project partner. 
-                  It is impossible to buy tokens without specifying a referrer. </p>
-                  <p>
-                  After the purchase, your wallet address becomes your referral code at the same time. 
-                  And if you add smrt16.com/ and your wallet address, you get your referral link.
+                  <p><b>Referral links in SMRT16</b> In SMRT16, 
+                  referral links are used to connect users who have purchased SMRT16 tokens through the DApp 
+                  or directly using the smart contract functions. 
+                  It is mandatory to specify a referrer when buying tokens. 
+                  After the purchase, the user's wallet address becomes their referral code and they can 
+                  create a referral link by adding "smrt16.com/" followed by their wallet address.
                   <br/>
                   <b>Example: <u>smrt16.com/</u><u style={{textDecorationStyle: "dashed"}}>0x5c580f5b34f7f7df64f5336f038c8705014a51ee</u>)</b>
                   </p>
@@ -96,8 +98,8 @@ export default function IndexPage() {
                 <Card.Title>Exchange USDT to SMRT16 tokens</Card.Title>
                 <a href="/faq#smrt16amount">How much SMRT16 tokens do&nbsp;I&nbsp;need?</a>
                 <Card.Text>
-                  It can be any amount, no limitation, exchange rate 1:1. You need to make decision based on your targets. 
-                  Please, use <b>Calculator of possible income</b> down below on this page.  
+                  It can be any amount, no limitation, exchange rate 1:1. The amount of SMRT16 tokens you may need depends on your goals. 
+                  The website provides a <a href="#assuption">calculator tool</a> to help you estimate potential income and assist in making an informed decision.  
                 </Card.Text>
               </Card.Body>
             </Card>
@@ -109,9 +111,9 @@ export default function IndexPage() {
                 <div className="index3">3</div>
                 <Card.Title>Refer friends. Get high revenue in USDT.</Card.Title>
                 <a href="/faq#smrt16work">How does the referral program work?</a>
-                <Card.Text>Here in SMRT16 DApp you always get SMRT16 tokens with a referral.  
-                  If you don't have any, the app can find you one automatically, 
-                  but purchasing without any is not possible.
+                <Card.Text>SMRT16 DApp allows users to acquire SMRT16 tokens through referrals.
+                   If a user does not have a referral, the DApp will automatically assign one. 
+                  It is not possible to purchase SMRT16 tokens without a referral.
                 </Card.Text>
               </Card.Body>
             </Card>

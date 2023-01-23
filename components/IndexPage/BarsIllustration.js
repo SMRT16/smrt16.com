@@ -114,8 +114,7 @@ export default function BarsIllustration(props) {
       <Col sm={12} lg={6} md={12} {...otherProps}>
         <div id="barstext">
           <p className="indexText">
-            Let's assume that your referrals with do everything the same with you:
-            invest the same amount and invite the same number of referrals. Then, see the following picture below.
+          Let's assume that your referrals with do everything the same as you: invest the same amount and invite the same number of referrals. Then, see the following data
           </p>
           <ul>
             <li>{dataBars[0]} USDT from {refCount} participats on the first level</li>

@@ -8,7 +8,7 @@ export const TheData = {
         All the functions are available "as is" and no investment advice should be found here.`,
 
         "diclimerBottomline":
-        "SMRT16 is NOT a legal entity, and is NOT an investment project.",
+        "SMRT16 is a decentralized program that operates on the blockchain, it is not a legal entity, and it is not an investment project. It is a smart contract-based affiliate program. The smart contract is a self-executing digital contract that is stored on the blockchain. This means that it operates automatically, without the need for intermediaries or human management, and it guarantees that the terms of the contract will be executed as programmed. It is a way for users to earn rewards for promoting and bringing new users to the program through a referral system. As a smart contract-based program, SMRT16 operates transparently and securely on the blockchain, allowing users to have full control over their participation in the program and their earned rewards.",
 
         "matter":"Decentralization Matters",
 

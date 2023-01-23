@@ -11,8 +11,8 @@ return (
                 <ol className="indexList">
                     <li><b>Purchase MATICs and USDT.</b> <a href="/faq#usdt">What&nbsp;is&nbsp;USDT?</a>
                       <p>
-                        The SMRT16 smart contract runs at Polygon, where you need MATIC tokens to pay the transaction fee.
-                          And also you get SMRT16 tokens in exchange for USDT, and later you get your referral rewards in this crypto representation of US dollars.
+                      The SMRT16 smart contract runs at Polygon, where you need MATIC tokens to pay the transaction fee.
+                      You can acquire SMRT16 tokens by exchanging USDT. The referral rewards earned through the referral program will also be given in USDT.
                       </p>
                     </li>
                     <li>Exchange USDT to SMRT16 tokens. <a href="/faq#smrt16amount">How much SMRT16 tokens do&nbsp;I&nbsp;need?</a>

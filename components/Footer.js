@@ -25,11 +25,12 @@ const Footer = () => {
         <Row>
 
         <Col sm={12} md={5} lg={5}>
-          <p>{TheData.projInfo.diclimer}</p>
+          
           
           <p>
             <strong>{TheData.projInfo.diclimerBottomline}</strong>
           </p>
+          <p>{TheData.projInfo.diclimer}</p>
         </Col>
         <Col lg={1} md={1}>&nbsp;</Col>
 
