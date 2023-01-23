@@ -536,3 +536,41 @@ ol.indexList li:before {
 #barstext {
   margin-top: 48px;
 }
+
+.hash-tag {
+  max-width: 171px;
+  display: inline-block;
+  vertical-align: bottom;
+}
+.text-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.shift {
+  font-size: 80%;
+  color: #5D6180;
+  margin-left: 1em;
+}
+.cIn {
+  padding: 2px;
+  background: #D9F5EE;
+  border: 1px solid #02977e;
+  border-radius: 3px;
+  color: #02977e;
+  text-transform: uppercase;
+  margin: 3px;
+  width:36px;
+}
+
+.cOut {
+  padding: 2px;
+  background: #F8EBD4;
+  border: 1px solid #B57C00;
+  border-radius: 3px;
+  color: #B57C00;
+  text-transform: uppercase;
+  margin: 3px;
+  width:36px;
+}

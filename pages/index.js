@@ -97,7 +97,7 @@ export default function IndexPage() {
                 <a href="/faq#smrt16amount">How much SMRT16 tokens do&nbsp;I&nbsp;need?</a>
                 <Card.Text>
                   It can be any amount, no limitation, exchange rate 1:1. You need to make decision based on your targets. 
-                  Please, use <b>Assumption calculator of possible income</b> down below on this page.  
+                  Please, use <b>Calculator of possible income</b> down below on this page.  
                 </Card.Text>
               </Card.Body>
             </Card>
@@ -119,7 +119,7 @@ export default function IndexPage() {
         </Row>
         <Row>
           <Col id="assuption">
-            <h4 >Assumption calculator of a possible income</h4>
+            <h4 >Calculator of a possible income</h4>
           </Col>
         </Row>
 

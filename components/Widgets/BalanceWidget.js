@@ -50,9 +50,10 @@ export default function BalanceWidget(props) {
         console.log("apiUrl", apiUrl, data?.data);
     }, [context, data]);
 
-
-    const formatData = (item) => {
-        let inOut = (item.from_address == context.r.addr) ? "Out" : "In";
+    const formatLine = (item) => {
+        const In = <span className="cIn">In</span>;
+        const Out = <span className="cOut">Out</span>;
+        let inOut = (item.from_address == context.r.addr) ? Out : In;
         let name = "Tokens";
         let value = +item.value;
         if(TheData.smrt16ContractAddr.toLocaleLowerCase() == item.address.toLocaleLowerCase()) {
@@ -65,14 +66,54 @@ export default function BalanceWidget(props) {
         } 
         
         return <>
-                {inOut}&nbsp;
-                {value} <b>{name}</b>
-                &nbsp;<a href={TheData.txScan + item.transaction_hash} title={"Hash: "+item.transaction_hash} target="_blank">
                 
-                {moment(item.block_timestamp).fromNow()}
-                </a> 
+                {inOut}
+                <span>{value}</span>&nbsp;
+                <span><b>{name}</b></span>&nbsp;
+                
             
         </>;
+    }
+
+    const formatData = (tr) => {
+        let arr = [];
+        
+        for (let i = 0; i < tr.length; i++) {
+            const item = tr[i];
+            if(!arr[item.block_timestamp]) {
+                arr[item.block_timestamp] = [];
+            }
+            arr[item.block_timestamp].push(item);
+            
+        }
+        
+        const keys = Object.keys(arr);
+        //console.log("tr",tr, keys);
+        return <div className="balanceWidgetContainer">
+            {keys.map((itx, idx) => {
+                let items = arr[itx];
+                let itm = items[0];
+                console.log('items',items);
+                return (<div key={idx}>
+                    <div className="text-truncate">
+                        <b>{moment(itx).fromNow()}</b>
+                    &nbsp;<a href={TheData.txScan + itm.transaction_hash} 
+                        title={"Hash: "+itm.transaction_hash} target="_blank">
+                        <span >{itm.transaction_hash}</span>
+                        </a> 
+                    </div>
+                    <div className="shift">
+                        {items.map((item,i)=>{
+                        return <div key={i}>
+                                {formatLine(item)}
+                            </div>;
+                        })}
+                            
+                    </div>
+                </div>
+                )})
+            }
+        </div>
     }
 
     return (
@@ -144,18 +185,20 @@ export default function BalanceWidget(props) {
                     </Accordion.Body>
                 </Accordion.Item>
                 <Accordion.Item eventKey="1">
-                    <Accordion.Header>Your Transactions &nbsp;<span className="smaller grey">{trCount}</span> </Accordion.Header>
+                    <Accordion.Header>Your Transactions </Accordion.Header>
                     <Accordion.Body>
                         {isLoading ? <Skeleton /> : <>
                             {error ? <>
                                 Error fetching transactions: {error + ""}
                             </> : <>
-                                <ol>
-                                    {data && data.data.result.map((item, idx) =>
-                                        <li key={idx}>
-                                            {formatData(item)}
-                                        </li>)}
-                                </ol>
+                                <div>
+                                    {trCount>0?<>
+                                        {data && formatData(data.data.result)}
+                                    </>:<>
+                                        <div>No data to display</div>
+                                    </>}
+                                    
+                                </div>
                             </>}
 
                         </>}
