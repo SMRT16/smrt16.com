@@ -6,6 +6,7 @@ import validator from "email-validator";
 import { SMRT16Context } from "../SMRT16Context";
 import { saveDBRecord } from "../Utils/user";
 import useSWR from "swr";
+import { fetcher } from "../../data/data";
 
 
 /**
@@ -113,8 +114,8 @@ export default function ProfileWidget(props) {
             
         <div className="avatar">
             {emailColor!='white' || emailContinueChange || !userEmail? 
-                <img src="/assets/avatar.png" width={60} height={60}
-                    style={{margin: '20px', borderRadius: '50%'}} />
+                <Image src="/assets/avatar.png" width={60} height={60}
+                    style={{margin: '20px', borderRadius: '50%'}} alt="avater"/>
                 :<Gravatar default="identicon" 
                     email={userEmail}
                     size={60} 

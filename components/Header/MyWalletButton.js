@@ -44,7 +44,7 @@ export default function MyWalletButton(props) {
                     target="_blank"
                     data-toggle="tooltip" 
                     data-placement="top" 
-                    title={"metamask.io"}>TheLang.MyWalletButton.getMetaMask</a>);
+                    title={"metamask.io"}>{TheLang.MyWalletButton.getMetaMask}</a>);
             }
         }
         

@@ -23,9 +23,9 @@ export default function Topbar(props) {
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav" style={{background: "white"}} >
               <Nav className="me-auto cmenu">
-                <Nav.Link href="/">TheLang.Topbar.home</Nav.Link>
-                <Nav.Link href="/#getstarted">TheLang.Topbar.getstarted</Nav.Link>
-                <Nav.Link href="/faq">TheLang.Topbar.faq</Nav.Link>
+                <Nav.Link href="/">{TheLang.Topbar.home}</Nav.Link>
+                <Nav.Link href="/#getstarted">{TheLang.Topbar.getstarted}</Nav.Link>
+                <Nav.Link href="/faq">{TheLang.Topbar.faq}</Nav.Link>
               </Nav>
             </Navbar.Collapse>
           </Container>

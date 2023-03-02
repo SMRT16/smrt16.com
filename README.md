@@ -67,7 +67,7 @@ What’s more, Vercel provides a lot of starting templates for many popular fram
 2. Make a page showing structures and statistics.
 3. Change "My Page" button to "Connect wallet"
 4. Make it to be easy to translate
-5. Implrove documentation
+5. Create documentation
 ~~6. Add linter~~
 7. Add tests
 8. Redesign FAQ
@@ -78,6 +78,8 @@ What’s more, Vercel provides a lot of starting templates for many popular fram
 13. Develop a mobile app
 14. Allow built-in wallet (for those who don't want MetaMask)
 15. Make a better guid of how to fork and deploy this project to Vercel (https://www.telerik.com/blogs/how-to-deploy-react-app-vercel-github)
+16. Maybe https://get.venly.io/business widget wallet integration
+17. Add "How it works" section
    
 
 
@@ -150,7 +152,7 @@ yarn export
   
 ## License 
 
-### MIT
+### [MIT](https://opensource.org/licenses/MIT)
 
 Copyright 2023 smrt16.com
 
@@ -159,3 +161,8 @@ Permission is hereby granted, free of charge, to any person obtaining a copy of 
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+
+# Terms of Service
+
+Available at https://github.com/SMRT16/smrt16.com/blob/master/TERMS.md 

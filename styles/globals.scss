@@ -210,10 +210,6 @@ p, p i, a {
 }
 
 
-
-
-
-
 .qrcode {
   text-align: center;
   padding:0px;
@@ -228,41 +224,12 @@ p, p i, a {
   margin:8px;
 }
 
-
-.cols2 {
-  display: flex;
-  justify-content: space-between;
-  background-color: #dadada27;
-  padding: 2px;
-  margin: 2px;
-}
-
-.cols2 div {
-  margin-top: 4px;
-}
-
-
-
-
-
-
-
-
-
 ol.indexList {
   display: block;
   padding: 20px 0 0 16px;
   list-style: none;
   counter-reset: numList;
 }
-
-/* ol {
-  display: block;
-  padding: 0 0 0 26px;
-  background: #ccc;
-  overflow: hidden;
-  counter-reset: numList;
-} */
 
 ol.indexList li {
   margin-left: 36px;

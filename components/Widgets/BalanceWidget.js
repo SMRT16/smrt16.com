@@ -6,7 +6,7 @@ import { SMRT16Context } from "../SMRT16Context";
 import useSWR from "swr";
 import moment from "moment";
 import { TheLang } from "../../data/lang";
-import { TheData } from "../../data/data";
+import { fetcher, TheData } from "../../data/data";
 
 /**
  * 

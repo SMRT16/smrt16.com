@@ -17,11 +17,15 @@ export const TheLang = {
     "projInfo":{
 
         "diclimer":`
-        This smrt16.com website has been created to provide information about the smart contracts developed and the decentralized application combined into a single project called SMRT16. 
-        All the functions are available "as is" and no investment advice should be found here.`,
+        Smrt16.com provides information about the SMRT16 project, which combines smart contracts 
+        and a decentralized application. 
+        All functions are available "as is," and the website does not provide investment advice.
+        `,
 
         "diclimerBottomline":
-        "SMRT16 is a decentralized program that operates on the blockchain, it is not a legal entity, and it is not an investment project. It is a smart contract-based affiliate program. The smart contract is a self-executing digital contract that is stored on the blockchain. This means that it operates automatically, without the need for intermediaries or human management, and it guarantees that the terms of the contract will be executed as programmed. It is a way for users to earn rewards for promoting and bringing new users to the program through a referral system. As a smart contract-based program, SMRT16 operates transparently and securely on the blockchain, allowing users to have full control over their participation in the program and their earned rewards.",
+        `SMRT16 is a blockchain-based, smart contract-powered affiliate program. It operates autonomously, without intermediaries, and ensures that the contract 
+        terms are executed as programmed. Users can earn rewards by promoting and referring new users to the program. SMRT16 operates transparently 
+        and securely on the blockchain, providing users with full control over their participation and rewards. It is not a legal entity or investment project.`,
 
         "matter":"Decentralization Matters",
 
@@ -147,4 +151,5 @@ Partners of the SMTR16 project are highly motivated to engage in marketing - aft
     "yourReferralLinkExpl": "Let your referrals to buy SMRT16 tokens from the page of this link.",
     "PolygonNotConnected": "Your wallet is not connected to Polygon!",
     "opensInNewWindow": "Opens in a new window",
+    "license": "Released under the [MIT Licence](https://github.com/SMRT16/smrt16.com#license)",
 };
