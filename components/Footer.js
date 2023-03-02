@@ -2,10 +2,11 @@ import React, { useContext } from "react";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import { Telegram, EnvelopeHeart, Github, Code, Bug, HouseHeart } from 'react-bootstrap-icons';
-import { TheData } from "./Utils/data.js";
+import { TheData } from "../data/data.js";
 import { SMRT16Context } from "./SMRT16Context";
 import { Container } from "react-bootstrap";
 import { ManageHistory, Money } from "@mui/icons-material";
+import HelperMenu from "./HelperMenu.js";
 
 
 
@@ -20,6 +21,10 @@ const Footer = () => {
         <Row style={{margin:"32px 0px"}}>
           <Col>
             <a href="/" id="#footer"><img src="/white-logo137x49.png" width={137} height={49} alt="SMRT16" /></a>
+          </Col>
+          
+          <Col>
+          <HelperMenu />
           </Col>
         </Row>
         <Row>

@@ -65,15 +65,19 @@ What’s more, Vercel provides a lot of starting templates for many popular fram
 
 1. Improve "Transaction list" section.
 2. Make a page showing structures and statistics.
-3. Make it to be easy to translate
-4. Implrove documentation
-5. Add linter
-6. Add tests
-7. Redesign FAQ
-8. Allow to continue dropped transactions
-9. Add buy USDT and MATICs buttons
-10. Develop a mobile app
-11. Allow built-in wallet (for those who don't want MetaMask)
+3. Change "My Page" button to "Connect wallet"
+4. Make it to be easy to translate
+5. Implrove documentation
+6. Add linter
+7. Add tests
+8. Redesign FAQ
+9. Redesign Buy Token Widget
+10. Submit the app to https://dappradar.com/dashboard/submit-dapp
+11. Allow to continue dropped transactions
+12. Add buy [USDT](https://tether.to/) and [MATICs](https://polygon.technology/) buttons
+13. Develop a mobile app
+14. Allow built-in wallet (for those who don't want MetaMask)
+15. Make a better guid of how to fork and deploy this project to Vercel (https://www.telerik.com/blogs/how-to-deploy-react-app-vercel-github)
    
 
 

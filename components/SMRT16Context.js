@@ -1,11 +1,9 @@
 import { ethers } from "ethers";
 import _ from "lodash";
 import React, { useEffect, useReducer } from "react";
-import { TheData } from "./Utils/data";
+import { TheData } from "../data/data";
 
 export const SMRT16Context = React.createContext();
-
-
 
 export function SMRT16Provider ({children}) {
 

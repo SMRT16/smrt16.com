@@ -8,7 +8,6 @@ import Topbar from "../components/Header/Topbar.js";
 
 
 import { Card, Col, Row } from "react-bootstrap";
-import { fetcher, TheData } from "../components/Utils/data.js";
 
 import { SMRT16Context } from "../components/SMRT16Context.js";
 import { Skeleton } from "@mui/material";
@@ -17,6 +16,7 @@ import { useRouter } from "next/router.js";
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import useSWR from "swr";
+import { fetcher, TheData } from "../data/data.js";
 
 
 

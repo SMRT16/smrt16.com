@@ -1,9 +1,10 @@
 import React, { Suspense, useContext, useEffect, useState } from "react";
 import { HouseHeart } from "react-bootstrap-icons";
 import { SMRT16Context } from "../SMRT16Context";
+import { TheLang } from "../../data/lang.js";
 
 // Component which appears in the menu and shows a link "My Page" || "Install MetaMask"
-export default function MyPageButton(props) {
+export default function MyWalletButton(props) {
     const { children, ...otherProps } = props;
 
     const [myButton, setMyButton] = useState('');
@@ -43,7 +44,7 @@ export default function MyPageButton(props) {
                     target="_blank"
                     data-toggle="tooltip" 
                     data-placement="top" 
-                    title={"metamask.io"}>Get MetaMask</a>);
+                    title={"metamask.io"}>TheLang.MyWalletButton.getMetaMask</a>);
             }
         }
         

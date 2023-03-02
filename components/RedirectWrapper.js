@@ -1,12 +1,12 @@
-import { Router, useRouter } from "next/router";
+import { useRouter } from "next/router";
 import { useContext, useEffect, useState } from "react";
 import useLocalStorage from "use-local-storage";
 import axios from "axios";
 import { SMRT16Context } from "./SMRT16Context";
 import { ethers } from "ethers";
-import { fetcher, TheData } from "./Utils/data";
 import { Skeleton } from "@mui/material";
 import useSWR from "swr";
+import { TheData, fetcher } from "../data/data";
 
 
 

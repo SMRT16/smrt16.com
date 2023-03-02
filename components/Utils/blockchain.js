@@ -1,6 +1,6 @@
 import { ethers } from 'ethers';
 import Router from 'next/router';
-import { TheData } from './data';
+import { TheData } from '../../data/data';
 
 const r = {
   usdtContractAddr: TheData.usdtContractAddr,

@@ -5,7 +5,6 @@ import Gravatar from "react-gravatar"
 import validator from "email-validator";
 import { SMRT16Context } from "../SMRT16Context";
 import { saveDBRecord } from "../Utils/user";
-import { fetcher, TheData } from "../Utils/data";
 import useSWR from "swr";
 
 

@@ -1,7 +1,6 @@
 import { useContext, useEffect, useState } from "react";
 import { Card } from "react-bootstrap";
 import { SMRT16Context } from "../../SMRT16Context";
-import { TheData } from "../../Utils/data";
 import Approve from "./Approve";
 import Buy from "./Buy";
 

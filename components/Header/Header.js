@@ -7,10 +7,7 @@ const Header = (props) => {
   return (
     <Head>
         <meta charSet="utf-8" />
-        {!props.title ?
         <title>SMRT16 ERC-20 Token with multi-level referral program built into the smart contract</title>
-        :
-        <title>{props.title}</title>}
 
         <meta
           name="viewport"

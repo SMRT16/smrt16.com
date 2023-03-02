@@ -3,7 +3,6 @@ import React, { useContext, useEffect } from "react";
 import { Accordion, Card, Stack } from "react-bootstrap";
 import useLocalStorage from "use-local-storage";
 import { SMRT16Context } from "../SMRT16Context";
-import { fetcher, TheData } from "../Utils/data";
 import useSWR from "swr";
 import moment from "moment";
 

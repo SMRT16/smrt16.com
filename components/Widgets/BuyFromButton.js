@@ -2,7 +2,6 @@ import { useContext, useEffect, useState } from "react";
 import useLocalStorage from "use-local-storage";
 import axios from "axios";
 import { Button, Card, Collapse } from "react-bootstrap";
-import { TheData } from "../Utils/data";
 import { SMRT16Context } from "../SMRT16Context";
 import { Info, InfoCircle } from "react-bootstrap-icons";
 

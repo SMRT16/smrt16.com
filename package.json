@@ -23,7 +23,7 @@
     "bootstrap": "^5.2.3",
     "chart.js": "^4.1.1",
     "email-validator": "^2.0.4",
-    "ethers": "^5.7.2",
+    "ethers": "^5",
     "lodash": "^4.17.21",
     "moment": "^2.29.4",
     "next": "13.1.1",
@@ -43,6 +43,7 @@
     "remark-gfm": "^3.0.1",
     "sass": "^1.57.1",
     "swr": "^2.0.0",
-    "use-local-storage": "^2.3.6"
+    "use-local-storage": "^2.3.6",
+    "wagmi": "^0.11.7"
   }
 }

@@ -4,7 +4,6 @@ import CopyToClipboard from "react-copy-to-clipboard";
 import QRCode from "react-qr-code";
 import ReactToPrint from "react-to-print";
 import { SMRT16Context } from "../SMRT16Context";
-import { TheData } from "../Utils/data";
 
 
 /**
