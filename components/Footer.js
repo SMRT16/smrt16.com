@@ -7,6 +7,9 @@ import { SMRT16Context } from "./SMRT16Context";
 import { Container } from "react-bootstrap";
 import { ManageHistory, Money } from "@mui/icons-material";
 import HelperMenu from "./HelperMenu.js";
+import Image from "next/image.js";
+import Link from "next/link.js";
+import { TheLang } from "../data/lang.js";
 
 
 
@@ -20,7 +23,7 @@ const Footer = () => {
       <Container>
         <Row style={{margin:"32px 0px"}}>
           <Col>
-            <a href="/" id="#footer"><img src="/white-logo137x49.png" width={137} height={49} alt="SMRT16" /></a>
+            <Link href="/" id="#footer"><Image src="/white-logo137x49.png" width={137} height={49} alt="SMRT16" /></Link>
           </Col>
           
           <Col>
@@ -33,18 +36,18 @@ const Footer = () => {
           
           
           <p>
-            <strong>{TheData.projInfo.diclimerBottomline}</strong>
+            <strong>{TheLang.projInfo.diclimerBottomline}</strong>
           </p>
-          <p>{TheData.projInfo.diclimer}</p>
+          <p>{TheLang.projInfo.diclimer}</p>
         </Col>
         <Col lg={1} md={1}>&nbsp;</Col>
 
         <Col sm={12} md={3} lg={3}>
           
           <div>
-            <div><a href="https://github.com/SMRT16/smrt16.com" target="_blank"><Github/>&nbsp;SMRT16 DApp sources</a></div>
-            <div><a href="https://polygonscan.com/address/0x1b605deaedc71f1a764e572b1ca68b5060978753#code" target="_blank"><Code/>&nbsp;SMRT16 Smart Contract sources</a></div>
-            <div><a  href="/faq#bug"><Bug />&nbsp;How to report a bug</a></div>
+            <div><Link href="https://github.com/SMRT16/smrt16.com" target="_blank"><Github/>&nbsp;SMRT16 DApp sources</Link></div>
+            <div><Link href="https://polygonscan.com/address/0x1b605deaedc71f1a764e572b1ca68b5060978753#code" target="_blank"><Code/>&nbsp;SMRT16 Smart Contract sources</Link></div>
+            <div><Link  href="/faq#bug"><Bug />&nbsp;How to report a bug</Link></div>
             <div><ManageHistory style={{width:16,height:16}}/>&nbsp;DApp version: {TheData.version}</div>
           </div>
           

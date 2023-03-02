@@ -13,12 +13,13 @@ import { SMRT16Context } from "../components/SMRT16Context";
 
 export default function IDPage() {
   const router = useRouter();
-  const { id } = router.query;
   const context = useContext(SMRT16Context);
+  const { id } = router.query;
 
 
 
   useEffect(() => {
+    
     if (id && context.r.id != id) {
       console.log('let context to know about the navigation');
       context.SMRT16dispatch({ id });
@@ -28,7 +29,7 @@ export default function IDPage() {
 
       }
     }
-  }, [context]);
+  }, [context,id]);
 
   return (
     <>

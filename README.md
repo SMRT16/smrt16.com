@@ -59,7 +59,7 @@ There are many great things about Vercel. First of all, it offers a very generou
 What’s more, Vercel provides a lot of starting templates for many popular frameworks, automated builds and deployments, separate environments for staging and production, serverless functions, CDN and more. For the full list of what Vercel offers, check out their documentation. Now, it’s time to set up a Vercel account.
 
 
-# TODO
+# Roadmap
 
 ## In Tech
 
@@ -68,7 +68,7 @@ What’s more, Vercel provides a lot of starting templates for many popular fram
 3. Change "My Page" button to "Connect wallet"
 4. Make it to be easy to translate
 5. Implrove documentation
-6. Add linter
+~~6. Add linter~~
 7. Add tests
 8. Redesign FAQ
 9. Redesign Buy Token Widget

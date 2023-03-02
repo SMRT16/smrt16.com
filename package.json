@@ -1,7 +1,8 @@
 {
   "name": "smrt16.com",
-  "version": "0.33.0",
+  "version": "0.42.0",
   "private": true,
+  "license": "MIT",
   "scripts": {
     "dev": "next dev",
     "dev-inspect": "NODE_OPTIONS='--inspect' next dev",
@@ -45,5 +46,9 @@
     "swr": "^2.0.0",
     "use-local-storage": "^2.3.6",
     "wagmi": "^0.11.7"
+  },
+  "devDependencies": {
+    "eslint": "8.35.0",
+    "eslint-config-next": "13.2.3"
   }
 }

@@ -11,6 +11,7 @@ import {
 } from 'chart.js'
 import { Bar } from 'react-chartjs-2';
 import { useState } from "react";
+import { TheLang } from "../../data/lang";
 
 export default function BarsIllustration(props) {
   const { children, ...otherProps } = props;
@@ -64,10 +65,10 @@ export default function BarsIllustration(props) {
     <>
       <Col sm={12} lg={6} md={12} {...otherProps}>
         <div id="inputHolder">
-          <h5>Try to enter your numbers:</h5>
+          <h5>{TheLang.BarsIllustration.tryYourNumbers}</h5>
           <Row>
             <Col>
-              <label htmlFor="Average">Average purchase USDT</label>
+              <label htmlFor="Average">{TheLang.BarsIllustration.everagePurchase}</label>
               <br/>
               <CurrencyInput
                 decimalsLimit={2}
@@ -81,7 +82,7 @@ export default function BarsIllustration(props) {
                 }} />
             </Col>
             <Col>
-              <label htmlFor="Affiliates">Affiliates number every level</label>
+              <label htmlFor="Affiliates">{TheLang.BarsIllustration.affiliatesNumber}</label>
               <br/>
               <CurrencyInput
                 decimalsLimit={0}
@@ -114,16 +115,16 @@ export default function BarsIllustration(props) {
       <Col sm={12} lg={6} md={12} {...otherProps}>
         <div id="barstext">
           <p className="indexText">
-          Let's assume that your referrals with do everything the same as you: invest the same amount and invite the same number of referrals. Then, see the following data
+          {TheLang.BarsIllustration.participantDescription}
           </p>
           <ul>
-            <li>{dataBars[0]} USDT from {refCount} participats on the first level</li>
-            <li>{dataBars[1]} USDT from {refCount ** 2} participats on the second level</li>
-            <li>{dataBars[2]} USDT from {refCount ** 3} participats on the third level</li>
-            <li>{dataBars[3]} USDT from {refCount ** 4} participats on the fourth level</li>
+            <li>{dataBars[0]} {TheLang.BarsIllustration.USDTfrom} {refCount}      {TheLang.BarsIllustration.participant1st}</li>
+            <li>{dataBars[1]} {TheLang.BarsIllustration.USDTfrom} {refCount ** 2} {TheLang.BarsIllustration.participant2nd}</li>
+            <li>{dataBars[2]} {TheLang.BarsIllustration.USDTfrom} {refCount ** 3} {TheLang.BarsIllustration.participant3rd}</li>
+            <li>{dataBars[3]} {TheLang.BarsIllustration.USDTfrom} {refCount ** 4} {TheLang.BarsIllustration.participant4th}</li>
           </ul>
 
-          <b>{dataBars[4]} USDT in total  from {totalRefCount()} participats in the structure, who all bring you from 50% to 6.25% of their purcahses</b>
+          <b>{dataBars[4]} {TheLang.BarsIllustration.inTotalFrom} {totalRefCount()} {TheLang.BarsIllustration.whoBrought}</b>
           <div>
             {children}
           </div>

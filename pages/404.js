@@ -1,4 +1,5 @@
-import { React, useState } from "react";
+import Image from "next/image";
+import { React } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import Footer from "../components/Footer";
 import Header from "../components/Header/Header";
@@ -26,7 +27,7 @@ export default function PageNotFound(props) {
                     </div>
                 </Col>
                 <Col  md={6} className="no-overflow">
-                    <img
+                    <Image
                         src="/assets/404error.svg"
                         alt="404"
                         layout="fixed"
