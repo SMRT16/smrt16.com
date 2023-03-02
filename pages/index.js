@@ -9,6 +9,7 @@ import Footer from "../components/Footer";
 import VideoIllustration from "../components/IndexPage/VideoIllustration";
 import Header from "../components/Header/Header";
 import Topbar from "../components/Header/Topbar";
+import Link from "next/link";
 
 
 export default function IndexPage() {
@@ -62,8 +63,8 @@ export default function IndexPage() {
                   referral links are used to connect users who have purchased SMRT16 tokens through the DApp 
                   or directly using the smart contract functions. 
                   It is mandatory to specify a referrer when buying tokens. 
-                  After the purchase, the user's wallet address becomes their referral code and they can 
-                  create a referral link by adding "smrt16.com/" followed by their wallet address.
+                  After the purchase, the user&apos;s wallet address becomes their referral code and they can 
+                  create a referral link by adding &quot;smrt16.com/&quot; followed by their wallet address.
                   <br/>
                   <b>Example: <u>smrt16.com/</u><u style={{textDecorationStyle: "dashed"}}>0x5c580f5b34f7f7df64f5336f038c8705014a51ee</u>)</b>
                   </p>
@@ -83,7 +84,7 @@ export default function IndexPage() {
               <Card.Body>
                 <div className="index3">1</div>
                 <Card.Title>Purchase MATICs and USDT</Card.Title>
-                <a href="/faq#usdt">What is USDT?</a>
+                <Link href="/faq#usdt">What is USDT?</Link>
                 <Card.Text>The SMRT16 smart contract runs at Polygon, where you need MATIC tokens to pay the transaction fee.
                   And also you get SMRT16 tokens in exchange for USDT, and later you get your referral rewards in this crypto representation of US dollars.
                 </Card.Text>
@@ -96,7 +97,7 @@ export default function IndexPage() {
               <Card.Body>
                 <div className="index3">2</div>
                 <Card.Title>Exchange USDT to SMRT16 tokens</Card.Title>
-                <a href="/faq#smrt16amount">How much SMRT16 tokens do&nbsp;I&nbsp;need?</a>
+                <Link href="/faq#smrt16amount">How much SMRT16 tokens do&nbsp;I&nbsp;need?</Link>
                 <Card.Text>
                   It can be any amount, no limitation, exchange rate 1:1. The amount of SMRT16 tokens you may need depends on your goals. 
                   The website provides a <a href="#assuption">calculator tool</a> to help you estimate potential income and assist in making an informed decision.  
@@ -110,7 +111,7 @@ export default function IndexPage() {
               <Card.Body>
                 <div className="index3">3</div>
                 <Card.Title>Refer friends. Get high revenue in USDT.</Card.Title>
-                <a href="/faq#smrt16work">How does the referral program work?</a>
+                <Link href="/faq#smrt16work">How does the referral program work?</Link>
                 <Card.Text>SMRT16 DApp allows users to acquire SMRT16 tokens through referrals.
                    If a user does not have a referral, the DApp will automatically assign one. 
                   It is not possible to purchase SMRT16 tokens without a referral.

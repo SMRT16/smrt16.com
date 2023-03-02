@@ -26,7 +26,7 @@ export default function VideoIllustration(props) {
                 /> */}
                 <ul>
                   <li>Spend USDT, receive USDT</li>
-                  <li>It's Polygon main net USDT</li>
+                  <li>It&apos;s Polygon main net USDT</li>
                   <li>You earn with the referral program</li>
                   <li>Money from token sale goes for referral program payments</li>
                   <li>No rules change, no price change, all is constant</li>

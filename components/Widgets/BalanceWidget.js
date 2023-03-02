@@ -5,6 +5,8 @@ import useLocalStorage from "use-local-storage";
 import { SMRT16Context } from "../SMRT16Context";
 import useSWR from "swr";
 import moment from "moment";
+import { TheLang } from "../../data/lang";
+import { TheData } from "../../data/data";
 
 /**
  * 
@@ -119,7 +121,7 @@ export default function BalanceWidget(props) {
         <>
             <Accordion defaultActiveKey="0">
                 <Accordion.Item eventKey="0">
-                    <Accordion.Header>Your balances</Accordion.Header>
+                    <Accordion.Header>{TheLang.BalanceWidget.balance}</Accordion.Header>
                     <Accordion.Body>
                                 <div>
                                     <Stack gap={2}>
@@ -127,7 +129,7 @@ export default function BalanceWidget(props) {
                                             <a href={refLink}
                                                 style={{ fontSize: '66%' }}
                                                 className="btn btn-sm btn-outline-secondary smaller"
-                                                target="_blank">View on PolygonScan</a>&nbsp;<button
+                                                target="_blank">{TheLang.BalanceWidget.viewOnExplorer}</a>&nbsp;<button
                                                     style={{ fontSize: '66%' }}
                                                     onClick={handleRefresh}
                                                     className="btn btn-sm btn-outline-secondary smaller"
@@ -152,10 +154,10 @@ export default function BalanceWidget(props) {
                     </div> */}
                                         </Stack>
                                         {context.r.ethereum ? <>
-                                            {userUSDT == '0.0' ? <p><b>Seems like you need to top up your USDT balance.</b></p> : <></>}
-                                            {userMATIC == '0.0' ? <p><b>Seems like you have to refill your MATIC balance first.</b></p> : <></>}
+                                            {userUSDT == '0.0' ? <p><b>{TheLang.BalanceWidget.topUpUSDT}</b></p> : <></>}
+                                            {userMATIC == '0.0' ? <p><b>{TheLang.BalanceWidget.topUpMATIC}</b></p> : <></>}
                                         </> : <>
-                                            <p>Wallet is not connected</p>
+                                            <p>{TheLang.BalanceWidget.walletNotConnected}</p>
                                         </>}
 
                                     </Stack>
@@ -164,10 +166,10 @@ export default function BalanceWidget(props) {
                             
                                 {context.r.pcontract && <span className="smaller grey">
                                     {/* <div title="pcontract">" {context.r.pcontract}"</div> */}
-                                    {context.r.pcontract != '0x0000000000000000000000000000000000000000' ?
+                                    {context.r.pcontract != TheData.zeroAddress ?
 
                                         <span title={context.r.pcontract}>
-                                            Your referrer is fixed to:&nbsp;
+                                            {TheLang.BalanceWidget.yourFixedRef}&nbsp;
                                             {context.r.referrer ?
                                                 <a href={'/' + context.r.referrer}>{context.r.referrer}</a>
                                                 :
@@ -176,7 +178,7 @@ export default function BalanceWidget(props) {
                                         </span>
 
                                         :
-                                        <>You don't have a fixed referrer yet.</>
+                                        <>{TheLang.BalanceWidget.noFixedRefYet}</>
                                     }
                                 </span>}
 
@@ -184,17 +186,17 @@ export default function BalanceWidget(props) {
                     </Accordion.Body>
                 </Accordion.Item>
                 <Accordion.Item eventKey="1">
-                    <Accordion.Header>Your Transactions </Accordion.Header>
+                    <Accordion.Header>{TheLang.BalanceWidget.yourTransations} </Accordion.Header>
                     <Accordion.Body>
                         {isLoading ? <Skeleton /> : <>
                             {error ? <>
-                                Error fetching transactions: {error + ""}
+                                {TheLang.BalanceWidget.errorGettingTranasactions}: {error + ""}
                             </> : <>
                                 <div>
                                     {trCount>0?<>
                                         {data && formatData(data.data.result)}
                                     </>:<>
-                                        <div>No data to display</div>
+                                        <div>{TheLang.BalanceWidget.noTransactionsYet}</div>
                                     </>}
                                     
                                 </div>

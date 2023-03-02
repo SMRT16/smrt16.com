@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Card } from "react-bootstrap";
 
 export default function GetStarted(props) {
@@ -22,7 +23,7 @@ return (
                     </li>
                     <li>Refer friends. Get high revenue in USDT. <Link href="/faq#smrt16work">How does the referral program work?</Link>
                       <p>
-                        Here in SMRT16 DApp you always get SMRT16 tokens with a referral.  If you don't have any, the app can find you one automatically, but purchasing without any is not possible.
+                        Here in SMRT16 DApp you always get SMRT16 tokens with a referral.  If you don&apos;t have any, the app can find you one automatically, but purchasing without any is not possible.
                       </p>
                     </li>
                 </ol>

@@ -17,7 +17,7 @@ export default function WhatsSMRT16(props) {
                   It features a four-level referral program built into its Smart Contract token sale, which aims to decentralize project marketing. The token operates on-chain, with no external management involvement. The goal of the project is to attract attention and generate financial benefits for token holders through funding from token sales and marketing bonuses.
                 </p>
                 <p>
-                The project's objective is to get people's attention, which will then be capitalized on for ongoing financial advantage for the token holders. 
+                The project&apos;s objective is to get people&apos;s attention, which will then be capitalized on for ongoing financial advantage for the token holders. 
                 SMRT16 generates its funding from token sales, rewarding participants through marketing bonuses.
                 </p>
                 

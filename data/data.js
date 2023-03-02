@@ -1,5 +1,7 @@
 export const TheData = {
   "version":"0.42",
+  "developerAddress":"0x0766f33ee51e895e39e373bc49e25b79ebb427a61",
+  "zeroAddress":"0x0000000000000000000000000000000000000000",
 
 
     "sellerInfo":{},

@@ -57,15 +57,15 @@ const Footer = () => {
         <Col sm={12} md={3} lg={3}>
           <div>
             <div>
-                <a href="https://t.me/+toXd6a6bF9QzM2Q0" target="_blank"><Telegram/>&nbsp;SMRT16.com Community</a>
+                <Link href="https://t.me/+toXd6a6bF9QzM2Q0" target="_blank"><Telegram/>&nbsp;SMRT16.com Community</Link>
             </div>
 
             <div>
-                <a href="mailto:dev@smrt16.com" target="_blank"><EnvelopeHeart/>&nbsp;dev@smrt16.com</a>
+                <Link href="mailto:dev@smrt16.com" target="_blank"><EnvelopeHeart/>&nbsp;dev@smrt16.com</Link>
             </div>
             <hr/>
-            <div><a href="/0"><Money style={{width:16,height:16}}/>&nbsp;Random referrer</a></div>
-            <div><a href="/1"><HouseHeart style={{width:16,height:16}}/>&nbsp;Client area</a></div>
+            <div><Link href="/0"><Money style={{width:16,height:16}}/>&nbsp;Random referrer</Link></div>
+            <div><Link href="/1"><HouseHeart style={{width:16,height:16}}/>&nbsp;Client area</Link></div>
             
           </div>
         </Col>

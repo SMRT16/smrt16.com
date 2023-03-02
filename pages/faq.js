@@ -78,7 +78,7 @@ export default function FAQPage() {
                             <Card style={anc==item.id?{background:"#2C70F433"}:{background:"white"}}>
                                 <Card.Body>
                                     <Card.Title>{item.question}</Card.Title>
-                                    <ReactMarkdown children={item.answer} remarkPlugins={[remarkGfm]} />
+                                    <ReactMarkdown remarkPlugins={[remarkGfm]}>{item.answer}</ReactMarkdown>
                                 </Card.Body>
                             </Card>
 

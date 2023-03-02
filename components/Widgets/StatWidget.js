@@ -8,6 +8,8 @@ import { useContext, useEffect, useState } from "react";
 
 import moment from "moment";
 import { SMRT16Context } from "../SMRT16Context.js";
+import { TheLang } from "../../data/lang.js";
+import { TheData } from "../../data/data.js";
 
 
 export default function StatWidget(props) {
@@ -30,7 +32,7 @@ export default function StatWidget(props) {
         return {};
       });
       obj.lvl = lvl;
-      if('0x0766f33ee51e895e39e373bc49e25b79ebb427a61'!=addr) {
+      if(TheData.developerAddress!=addr) {
         const q = query(usersRef, where("referrer", "==", addr));
         const querySnapshot = await getDocs(q);
         let cnt = querySnapshot.docs.length;
@@ -72,11 +74,11 @@ export default function StatWidget(props) {
   const renderChildren = (obj) => {
     return <>
     {obj.children? <div className={"lvl"+obj.lvl} >
-        Level {obj.lvl}, count: {obj.count} referrals of "{obj.data.name}"
+        {TheLang.StatWidget.level} {obj.lvl}, count: {obj.count} referrals of &quot;{obj.data.name}&quot;
           <ol>
               {obj.children.map((item0, idx0)=>
               <li key={idx0}>
-                <a href={"/stat/"+item0.name}>{item0.name}</a> ({item0.data.lastVisit? <>{moment(item0.data.lastVisit.toDate()).fromNow()}</>:<>-</>}) "{item0.data.name}"
+                <a href={"/stat/"+item0.name}>{item0.name}</a> ({item0.data.lastVisit? <>{moment(item0.data.lastVisit.toDate()).fromNow()}</>:<>-</>}) &quot;{item0.data.name}&quot;
                 {item0.children?
                   <div className="children">
                     {renderChildren(item0)}
@@ -85,7 +87,7 @@ export default function StatWidget(props) {
                 
               </li>)}
           </ol>  
-        </div>:<>No referrals</>}
+        </div>:<>{TheLang.StatWidget.noRefs}</>}
     </>;
   }
 

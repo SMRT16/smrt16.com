@@ -1,5 +1,9 @@
+import { Skeleton } from "@mui/material";
+import Link from "next/link";
 import { useContext, useEffect, useState } from "react";
 import { Card } from "react-bootstrap";
+import { TheData } from "../../../data/data";
+import { TheLang } from "../../../data/lang";
 import { SMRT16Context } from "../../SMRT16Context";
 import Approve from "./Approve";
 import Buy from "./Buy";
@@ -76,7 +80,7 @@ export default function BuyWidget(props) {
     return (
         <Card title="Buy Widget">
             <Card.Body>
-                <Card.Title>Buy SMRT16 Tokens</Card.Title>
+                <Card.Title>{TheLang.BuyWidget.buy}</Card.Title>
                 <div>
                     {step && TheData['BuyWidgetT' + step]}
                     <hr />
@@ -89,12 +93,12 @@ export default function BuyWidget(props) {
                         results: <>
                             {tx ?
                                 <div>
-                                    Transaction Hash: <u><a title="Opens in a new window" target="_blank"
-                                        href={TheData.txScan + tx}>{tx}</a></u>
+                                    {TheLang.BuyWidget.transactionHash} <u><Link title={TheLang.opensInNewWindow} target="_blank"
+                                        href={TheData.txScan + tx}>{tx}</Link></u>
                                 </div>
                                 :
                                 <div>
-                                    <a href='/1'>Go to "My page" to see how to sell</a>
+                                    <Link href='/1'>{TheData.BuyWidget.howtoSellText}</Link>
                                 </div>
                             }
                         </>
