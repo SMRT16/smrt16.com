@@ -25,7 +25,7 @@ The contract has several functions, including:
 
 This code implements a referral bonus system that rewards buyers for bringing new buyers to the platform. The system calculates bonuses based on the number of referrers and the amount of tokens purchased. The bonuses are paid in the _usd token and a small fee is burned in the process.
 
-**More details you can find on** https://smrt16.com
+[**More details you can find on** https://smrt16.gitbook.io/smrt16-docs/](https://smrt16.gitbook.io/smrt16-docs/) 
 
 # You can 
 ## Copy this website and start it for free
@@ -67,8 +67,8 @@ What’s more, Vercel provides a lot of starting templates for many popular fram
 2. Make a page showing structures and statistics.
 3. Change "My Page" button to "Connect wallet"
 4. Make it to be easy to translate
-5. Create documentation
-~~6. Add linter~~
+5. ~~Create documentation~~
+6. ~~Add linter~~
 7. Add tests
 8. Redesign FAQ
 9. Redesign Buy Token Widget

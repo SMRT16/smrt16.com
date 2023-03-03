@@ -1,12 +1,14 @@
+import { TheLang } from "../../data/lang.js";
+import { TheData, fetcher } from "../../data/data.js";
 import { Skeleton } from "@mui/material";
 import React, { useContext, useEffect } from "react";
-import { Accordion, Card, Stack } from "react-bootstrap";
+import { Accordion, Stack } from "react-bootstrap";
 import useLocalStorage from "use-local-storage";
 import { SMRT16Context } from "../SMRT16Context";
 import useSWR from "swr";
 import moment from "moment";
-import { TheLang } from "../../data/lang";
-import { fetcher, TheData } from "../../data/data";
+
+//import { OnramperWidget } from "@onramper/widget";
 
 /**
  * 
@@ -17,7 +19,6 @@ import { fetcher, TheData } from "../../data/data";
 export default function BalanceWidget(props) {
 
     //APIgetWalletTokenTransfers
-
 
     const context = useContext(SMRT16Context);
     const refLink = TheData.addrScan + (props.id || context.r.addr);
@@ -186,6 +187,19 @@ export default function BalanceWidget(props) {
                     </Accordion.Body>
                 </Accordion.Item>
                 <Accordion.Item eventKey="1">
+                    <Accordion.Header>{TheLang.BalanceWidget.yourTransations} </Accordion.Header>
+                    <Accordion.Body>
+                        <div style={{maxWidth: '482px',  maxHeight: '660px',  height: '100%',  width: '100%'}}>
+                                {/* <OnramperWidget
+                                    defaultAddrs={[context.r.addr]}
+                                    defaultCrypto="MATIC"
+                                    API_KEY="pk_test_yJ08xlT46U1Xv4j2s0IihMLj21eBzGaJUc1Jw8cqOx00"
+                                /> */}
+                        </div>
+
+                    </Accordion.Body>
+                </Accordion.Item>
+                <Accordion.Item eventKey="2">
                     <Accordion.Header>{TheLang.BalanceWidget.yourTransations} </Accordion.Header>
                     <Accordion.Body>
                         {isLoading ? <Skeleton /> : <>

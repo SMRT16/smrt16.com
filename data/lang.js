@@ -89,7 +89,7 @@ Partners of the SMTR16 project are highly motivated to engage in marketing - aft
     "BuyWidget": {
         "buy": "Buy SMRT16 Tokens",
         "transactionHash": "Transaction Hash:",
-        "howtoSellText": "Go to &ldquo;My page&rdquo; to see how to sell",
+        "howtoSell": "Go to &ldquo;My page&rdquo; to see how to sell",
     },
     "BalanceWidget": {
         "balance": "Your balances",

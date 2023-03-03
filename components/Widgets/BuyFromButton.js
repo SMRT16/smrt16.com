@@ -4,6 +4,7 @@ import axios from "axios";
 import { Button, Card, Collapse } from "react-bootstrap";
 import { SMRT16Context } from "../SMRT16Context";
 import { Info, InfoCircle } from "react-bootstrap-icons";
+import { TheData } from "../../data/data";
 
 /**
  * 

@@ -6,7 +6,7 @@ import validator from "email-validator";
 import { SMRT16Context } from "../SMRT16Context";
 import { saveDBRecord } from "../Utils/user";
 import useSWR from "swr";
-import { fetcher } from "../../data/data";
+import { fetcher, TheData } from "../../data/data.js";
 
 
 /**

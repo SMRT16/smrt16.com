@@ -6,7 +6,7 @@ import { SMRT16Context } from "./SMRT16Context";
 import { ethers } from "ethers";
 import { Skeleton } from "@mui/material";
 import useSWR from "swr";
-import { TheData, fetcher } from "../data/data";
+import { TheData, fetcher } from "../data/data.js";
 import PageNotFound from "../pages/404";
 
 

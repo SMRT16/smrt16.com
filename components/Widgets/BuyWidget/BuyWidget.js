@@ -98,7 +98,7 @@ export default function BuyWidget(props) {
                                 </div>
                                 :
                                 <div>
-                                    <Link href='/1'>{TheData.BuyWidget.howtoSellText}</Link>
+                                    <Link href='/1'>{TheLang.BuyWidget.howtoSell}</Link>
                                 </div>
                             }
                         </>
