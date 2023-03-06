@@ -138,35 +138,35 @@ export function SMRT16Provider ({children}) {
 
     useEffect(()=>{
         const r = bdata;
-        if(!r.ethereum) {
-            if(window && window.ethereum) {
-                r.ethereum = window.ethereum;
-                //console.log("ethereum found",window.ethereum.networkVersion);
-                r.isPolygon = window.ethereum.networkVersion == 137;
-                r.ethereum.request({ method: 'eth_chainId' }).then((chainId)=>{
-                    console.log("method: 'eth_chainId'",chainId);
-                    r.ethereum.on('chainChanged', (_chainId) => window.location.reload());
-                }).catch((eth_chainIderror)=>{
-                    console.log('eth_chainId',eth_chainIderror);
-                    // r.errors .push(error);
-                    // dispatch(null);
-                });
+        // if(!r.ethereum) {
+        //     if(window && window.ethereum) {
+        //         r.ethereum = window.ethereum;
+        //         //console.log("ethereum found",window.ethereum.networkVersion);
+        //         r.isPolygon = window.ethereum.networkVersion == 137;
+        //         r.ethereum.request({ method: 'eth_chainId' }).then((chainId)=>{
+        //             console.log("method: 'eth_chainId'",chainId);
+        //             r.ethereum.on('chainChanged', (_chainId) => window.location.reload());
+        //         }).catch((eth_chainIderror)=>{
+        //             console.log('eth_chainId',eth_chainIderror);
+        //             // r.errors .push(error);
+        //             // dispatch(null);
+        //         });
                 
 
-                r.ethereum.request({ method: 'eth_requestAccounts' })
-                    .then(handleAccountsChanged)
-                    .catch((error)=>{
-                        console.log('r.ethereum.request',error);
-                        // r.errors .push(error);
-                        // dispatch(null);
-                    });
-                r.ethereum.on('accountsChanged', handleAccountsChanged);
-            } else {
-                console.log("Ethereum not found");
-                dispatch({error:"error",reason:'Please, connect to MetaMask'});
-                r.myPageBtnMsg = 'Please, connect to MetaMask';
-            }
-        } 
+        //         r.ethereum.request({ method: 'eth_requestAccounts' })
+        //             .then(handleAccountsChanged)
+        //             .catch((error)=>{
+        //                 console.log('r.ethereum.request',error);
+        //                 // r.errors .push(error);
+        //                 // dispatch(null);
+        //             });
+        //         r.ethereum.on('accountsChanged', handleAccountsChanged);
+        //     } else {
+        //         console.log("Ethereum not found");
+        //         dispatch({error:"error",reason:'Please, connect to MetaMask'});
+        //         r.myPageBtnMsg = 'Please, connect to MetaMask';
+        //     }
+        // } 
 
     },[]);
 

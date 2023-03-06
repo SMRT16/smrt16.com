@@ -1,17 +1,17 @@
 import React, { useContext } from "react";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import { Telegram, EnvelopeHeart, Github, Code, Bug, HouseHeart, LayerBackward, LayoutWtf, ShieldCheck } from 'react-bootstrap-icons';
+import { Telegram, EnvelopeHeart, Github, Code, Bug, HouseHeart, ShieldCheck } from 'react-bootstrap-icons';
 import { TheData } from "../data/data.js";
 import { SMRT16Context } from "./SMRT16Context";
 import { Container } from "react-bootstrap";
-import { FormatQuote, LegendToggle, ManageHistory, Money, QuestionAnswer } from "@mui/icons-material";
+import { ManageHistory, Money, QuestionAnswer } from "@mui/icons-material";
 import HelperMenu from "./HelperMenu.js";
 import Image from "next/image.js";
 import Link from "next/link.js";
 import { TheLang } from "../data/lang.js";
 import { ReactMarkdown } from "react-markdown/lib/react-markdown.js";
-
+import version from "../version.js";
 
 
 const Footer = () => {
@@ -58,7 +58,7 @@ const Footer = () => {
             <div><Link  href="https://github.com/SMRT16/smrt16.com/blob/master/TERMS.md" 
               target="_blank"><ShieldCheck />&nbsp;Terms of Service</Link></div>
             <div><Link  href="/faq#bug"><Bug />&nbsp;How to report a bug</Link></div>
-            <div><ManageHistory style={{width:16,height:16}}/>&nbsp;DApp version: {TheData.version}</div>
+            <div><ManageHistory style={{width:16,height:16}}/>&nbsp;DApp version: {version}</div>
             
           </div>
           
