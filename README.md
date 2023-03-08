@@ -80,6 +80,7 @@ What’s more, Vercel provides a lot of starting templates for many popular fram
 15. Make a better guid of how to fork and deploy this project to Vercel (https://www.telerik.com/blogs/how-to-deploy-react-app-vercel-github)
 16. Maybe https://get.venly.io/business widget wallet integration
 17. Add "How it works" section
+18. Optimize QR Code generation with https://www.npmjs.com/package/qrcode 
    
 
 
