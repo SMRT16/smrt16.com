@@ -3,6 +3,7 @@ import { Container, Image, Nav, Navbar, NavDropdown } from "react-bootstrap";
 
 import { SMRT16Context } from "../SMRT16Context";
 import { TheLang } from "../../data/lang.js";
+import ConnectWalletButton from "../ConnectWalletButton";
 
 export const TopbarContext = React.createContext();
 
@@ -26,6 +27,9 @@ export default function Topbar(props) {
                 <Nav.Link href="/">{TheLang.Topbar.home}</Nav.Link>
                 <Nav.Link href="/#getstarted">{TheLang.Topbar.getstarted}</Nav.Link>
                 <Nav.Link href="/faq">{TheLang.Topbar.faq}</Nav.Link>
+                <Nav.Item>
+                  <ConnectWalletButton />
+                </Nav.Item>
               </Nav>
             </Navbar.Collapse>
           </Container>

@@ -37,7 +37,7 @@ export default function IDPage() {
       <Topbar id={id} />
       <RedirectWrapper id={id}>
         <Container>
-          {/* {"isPolygon: "+(!id || !context.r.isPolygon)} */}
+
           <ErrorsDisplay />
 
           {!id || !context.r.isPolygon ? <>
@@ -55,8 +55,6 @@ export default function IDPage() {
                 {context.r.isMyPage ? <>
                   <MyContent />
                 </> : <>
-                  {/* <p>It's not my page, but welcome {context.r.addr} {context.r.isMyPage+' '+context.r.id}</p> */}
-
                   <TheirsContent />
                 </>}
               </> : <>
