@@ -1,4 +1,4 @@
-import React, {  useContext, useState } from "react";
+import React, { useContext, useState } from "react";
 import { Container, Image, Nav, Navbar, NavDropdown } from "react-bootstrap";
 
 import { SMRT16Context } from "../SMRT16Context";
@@ -8,33 +8,39 @@ import ConnectWalletButton from "../ConnectWalletButton";
 export const TopbarContext = React.createContext();
 
 export default function Topbar(props) {
-  const {r}= useContext(SMRT16Context);
+  const { r } = useContext(SMRT16Context);
 
   return (
-      <header>
-        <Navbar expand="lg">
-          <Container style={{padding:"0px 12px"}}>
+    <header>
+      <Navbar expand="lg">
+        <Container style={{ padding: "0px 12px" }}>
+          <Nav >
             <Navbar.Brand href="/"><Image
-                        src="/assets/smrt16-with-text-logo.png"
-                        alt="SMRT16"
-                        layout="fixed"
-                        width={140}
-                        height={50}
-                    /></Navbar.Brand>
-            <Navbar.Toggle aria-controls="basic-navbar-nav" />
-            <Navbar.Collapse id="basic-navbar-nav" style={{background: "white"}} >
-              <Nav className="me-auto cmenu">
-                <Nav.Link href="/">{TheLang.Topbar.home}</Nav.Link>
-                <Nav.Link href="/#getstarted">{TheLang.Topbar.getstarted}</Nav.Link>
-                <Nav.Link href="/faq">{TheLang.Topbar.faq}</Nav.Link>
-                <Nav.Item>
-                  <ConnectWalletButton />
-                </Nav.Item>
-              </Nav>
-            </Navbar.Collapse>
-          </Container>
-        </Navbar>
-      </header>
-    );
+              src="/assets/smrt16-with-text-logo.png"
+              alt="SMRT16"
+              layout="fixed"
+              width={140}
+              height={50}
+            /></Navbar.Brand>
+          </Nav>
+
+          <Navbar.Collapse id="top-navbar-nav" >
+            <Nav className="me-auto">
+              <Nav.Link href="/">{TheLang.Topbar.home}</Nav.Link>
+              <Nav.Link href="/#getstarted">{TheLang.Topbar.getstarted}</Nav.Link>
+              <Nav.Link href="/faq">{TheLang.Topbar.faq}</Nav.Link>
+            </Nav>
+          </Navbar.Collapse>
+          <Nav className="justify-content-end" >
+            <Nav.Item>
+              <ConnectWalletButton />
+            </Nav.Item>
+          </Nav>
+
+          <Navbar.Toggle aria-controls="top-navbar-nav" />
+        </Container>
+      </Navbar>
+    </header>
+  );
 
 }

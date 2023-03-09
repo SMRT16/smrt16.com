@@ -4,13 +4,14 @@ import { SMRT16Context } from "./SMRT16Context";
 import { TheLang } from "../data/lang.js";
 import { useAccount, useConnect, useDisconnect } from 'wagmi'
 import { InjectedConnector } from 'wagmi/connectors/injected'
+import { Button } from "react-bootstrap";
 
 // Component which appears in the menu and shows a link "My Page" || "Install MetaMask"
 export default function ConnectWalletButton(props) {
     const { children, ...otherProps } = props;
 
     const [myButton, setMyButton] = useState('');
-    const context = useContext(SMRT16Context);
+    const {SMRT16dispatch} = useContext(SMRT16Context);
     const { address, isConnected } = useAccount()
     const { connect } = useConnect({
         connector: new InjectedConnector(),
@@ -20,14 +21,12 @@ export default function ConnectWalletButton(props) {
     useEffect(() => {
         if (isConnected) {
             setMyButton(
-                <div>
-                    Connected to {address}
-                    <button onClick={() => disconnect()}>{TheLang.disconnectWallet}</button>
-                </div>
+                    <Button title={address} onClick={() => disconnect()}>{TheLang.disconnectWallet}</Button>
             );
+            SMRT16dispatch({ reason: "connect", ethereum:window.ethereum  });
         } else {
             
-            setMyButton(<button onClick={() => connect()}>{TheLang.connectWallet}</button>);
+            setMyButton(<Button onClick={() => connect()}>{TheLang.connectWallet}</Button>);
         }
     },[isConnected])
 
@@ -72,6 +71,7 @@ export default function ConnectWalletButton(props) {
     //     }
 
     // },[context]);
+    //return  <ConnectKitButton />;
 
     return (
         <span {...otherProps} className="myPageButton">

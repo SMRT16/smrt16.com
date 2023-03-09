@@ -155,5 +155,5 @@ Partners of the SMTR16 project are highly motivated to engage in marketing - aft
     "walletPolygonConnectionNeeded": "Please, switch your MetaMask to Polygon main net!",
     "loading": "Loading...",
     "connectWallet": "Connect Wallet",
-    "disconnectWallet": "Disconnect",
+    "disconnectWallet": "Disconnect Wallet",
 };

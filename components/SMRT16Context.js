@@ -2,15 +2,20 @@ import { ethers } from "ethers";
 import _ from "lodash";
 import React, { useEffect, useReducer } from "react";
 import { TheData } from "../data/data";
-import { getDefaultProvider } from 'ethers'
 import { configureChains } from '@wagmi/core'
 import { polygon } from '@wagmi/core/chains'
 import { publicProvider } from '@wagmi/core/providers/public'
 import { alchemyProvider } from '@wagmi/core/providers/alchemy'
 import { createClient, WagmiConfig } from "wagmi";
 
+
 export const SMRT16Context = React.createContext();
 const alchemyKey = process.env.ALCHEMY_ID;
+const initialData = {
+    errors: [],
+    usdtContractAddr: TheData.usdtContractAddr,
+    smrt16ContractAddr: TheData.smrt16ContractAddr,
+};
 
 /**
  * Loads and keeps Ethereum context data
@@ -20,14 +25,18 @@ export function SMRT16Provider({ children }) {
     const { provider } = configureChains(
         [polygon],
         [
-          alchemyProvider({ apiKey: alchemyKey, priority: 1 }),
-          publicProvider({ priority: 0 }),
+            alchemyProvider({ apiKey: alchemyKey, priority: 1 }),
+            publicProvider({ priority: 0 }),
         ],
-      )
-      const client = createClient({
+    )
+
+    const client1 = createClient({
         autoConnect: true,
         provider,
-      })
+    })
+
+
+
 
     const getMisc = async (r) => {
         if (r.provider) {
@@ -101,6 +110,57 @@ export function SMRT16Provider({ children }) {
         return false;
     }
 
+    const whenConnect = (ethereum) => {
+        console.log("provider",provider,window.ethereum);
+        const r = initialData;
+        r.ethereum = ethereum;
+        //console.log("ethereum found",window.ethereum.networkVersion);
+        r.isPolygon = window.ethereum.networkVersion == 137;
+        r.ethereum.request({ method: 'eth_chainId' }).then((chainId) => {
+            console.log("method: 'eth_chainId'", chainId);
+            r.ethereum.on('chainChanged', (_chainId) => window.location.reload());
+        }).catch((eth_chainIderror) => {
+            console.log('eth_chainId', eth_chainIderror);
+            // r.errors .push(error);
+            // dispatch(null);
+        });
+
+
+        r.ethereum.request({ method: 'eth_requestAccounts' })
+            .then(handleAccountsChanged)
+            .catch((error) => {
+                console.log('r.ethereum.request', error);
+                // r.errors .push(error);
+                // dispatch(null);
+            });
+        r.ethereum.on('accountsChanged', handleAccountsChanged);
+    }
+
+
+
+    const handleAccountsChanged = (accounts) => {
+        const r = initialData;
+        if (accounts.length === 0) {
+            dispatch({ reason: 'MetaMask is locked or the user has not connected any accounts', error: "error" });
+        } else if (accounts[0] !== r.addr) {
+            r.isPolygon = window.ethereum.networkVersion == 137;
+            r.addr = accounts[0];
+            r.isMyPage = ('' + r.addr).toLocaleLowerCase() == (r.id + '').toLocaleLowerCase();
+            //console.log("-----------eth_accounts update",r.isMyPage,r.addr,r.id);
+            r.provider = new ethers.providers.Web3Provider(ethereum, "any");
+            r.signer = r.provider.getSigner();
+            r.contractUSDT = new ethers.Contract(r.usdtContractAddr, TheData.abiUSDT, r.signer);
+            r.contractSMRT = new ethers.Contract(r.smrt16ContractAddr, TheData.abiSMRT, r.signer);
+            console.log('Finished with ethereum update');
+
+            getBalances(r).then(() => {
+                getMisc(r);
+            });
+        }
+        dispatch(r);
+    }
+
+
     const reducer = (state, a) => {
 
         const r = { ...state, ...a };
@@ -126,7 +186,7 @@ export function SMRT16Provider({ children }) {
                 getBalances(state);
             }
             if ("connect" == a.reason) {
-                whenEthereum(a.ethereum);
+                whenConnect(a.ethereum);
             }
         }
         r.isMyPage = ('' + r.addr).toLocaleLowerCase() == (r.id + '').toLocaleLowerCase();
@@ -135,59 +195,8 @@ export function SMRT16Provider({ children }) {
     }
 
 
-    const [bdata, dispatch] = useReducer(reducer, {
-        errors: [],
-        usdtContractAddr: TheData.usdtContractAddr,
-        smrt16ContractAddr: TheData.smrt16ContractAddr,
-    });
-
-
-    const handleAccountsChanged = (accounts) => {
-        const r = bdata;
-        if (accounts.length === 0) {
-            dispatch({ reason: 'MetaMask is locked or the user has not connected any accounts', error: "error" });
-        } else if (accounts[0] !== r.addr) {
-            r.isPolygon = window.ethereum.networkVersion == 137;
-            r.addr = accounts[0];
-            r.isMyPage = ('' + r.addr).toLocaleLowerCase() == (r.id + '').toLocaleLowerCase();
-            //console.log("-----------eth_accounts update",r.isMyPage,r.addr,r.id);
-            r.provider = new ethers.providers.Web3Provider(ethereum, "any");
-            r.signer = r.provider.getSigner();
-            r.contractUSDT = new ethers.Contract(r.usdtContractAddr, TheData.abiUSDT, r.signer);
-            r.contractSMRT = new ethers.Contract(r.smrt16ContractAddr, TheData.abiSMRT, r.signer);
-            console.log('Finished with ethereum update');
-
-            getBalances(r).then(() => {
-                getMisc(r);
-            });
-        }
-        dispatch(r);
-    }
-
-    const whenEthereum = (ethereum) => {
-        const r = bdata;
-        r.ethereum = ethereum;
-        //console.log("ethereum found",window.ethereum.networkVersion);
-        r.isPolygon = window.ethereum.networkVersion == 137;
-        r.ethereum.request({ method: 'eth_chainId' }).then((chainId) => {
-            console.log("method: 'eth_chainId'", chainId);
-            r.ethereum.on('chainChanged', (_chainId) => window.location.reload());
-        }).catch((eth_chainIderror) => {
-            console.log('eth_chainId', eth_chainIderror);
-            // r.errors .push(error);
-            // dispatch(null);
-        });
-
-
-        r.ethereum.request({ method: 'eth_requestAccounts' })
-            .then(handleAccountsChanged)
-            .catch((error) => {
-                console.log('r.ethereum.request', error);
-                // r.errors .push(error);
-                // dispatch(null);
-            });
-        r.ethereum.on('accountsChanged', handleAccountsChanged);
-    }
+    const [bdata, dispatch] = useReducer(reducer, initialData);
+   
 
     /*
         useEffect(() => {
@@ -205,10 +214,12 @@ export function SMRT16Provider({ children }) {
         }, []);
     //*/
     return (
-        <WagmiConfig client={client}>
-            <SMRT16Context.Provider value={{ r: bdata, SMRT16dispatch: dispatch }}>
-                {children}
-            </SMRT16Context.Provider>
+        <WagmiConfig client={client1}>
+
+                <SMRT16Context.Provider value={{ r: bdata, SMRT16dispatch: dispatch }}>
+                    {children}
+                </SMRT16Context.Provider>
+
         </WagmiConfig>
 
     );

@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useRef, useState } from "react";
-import { Button, Card, Form, InputGroup, Stack } from "react-bootstrap";
+import { Button, Card, Form, Image, InputGroup, Stack } from "react-bootstrap";
 import useLocalStorage from "use-local-storage";
 import Gravatar from "react-gravatar"
 import validator from "email-validator";
