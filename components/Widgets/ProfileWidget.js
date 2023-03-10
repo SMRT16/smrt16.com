@@ -101,7 +101,7 @@ export default function ProfileWidget(props) {
                     setUserEmail(data.email);
                 }
             }
-
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     },[data,error]);
 
 
