@@ -541,3 +541,42 @@ ol.indexList li:before {
   margin: 3px;
   width:36px;
 }
+
+div.HeroSection {
+  .hero {
+    // background-color: #F2F2F2;
+    padding: 100px 0;
+  }
+  
+  
+  .hero-text h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+  }
+  
+  .hero-text p {
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+  
+  .btn {
+    display: inline-block;
+    background-color: #4CA1AF;
+    color: #FFFFFF;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 20px 40px;
+    border-radius: 50px;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .btn:hover {
+    background-color: #36707E;
+  }
+  
+  .hero-image img {
+    max-width: 100%;
+    height: auto;
+  }
+}

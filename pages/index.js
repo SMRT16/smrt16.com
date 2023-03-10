@@ -10,6 +10,7 @@ import VideoIllustration from "../components/IndexPage/VideoIllustration";
 import Header from "../components/Header/Header";
 import Topbar from "../components/Header/Topbar";
 import Link from "next/link";
+import HeroSection from "../components/IndexPage/HeroSection";
 
 
 export default function IndexPage() {
@@ -18,6 +19,7 @@ export default function IndexPage() {
     <>
       <Header />
       <Topbar />
+      <HeroSection />
       <Container id="index">
         <Row>
           <Col sm={12} lg={6} md={12}>
