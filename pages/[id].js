@@ -13,8 +13,8 @@ import { SMRT16Context } from "../components/SMRT16Context";
 
 export default function IDPage() {
   const router = useRouter();
-  const context = useContext(SMRT16Context);
   const { id } = router.query;
+  const context = useContext(SMRT16Context);
 
 
 
