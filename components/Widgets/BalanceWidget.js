@@ -130,7 +130,7 @@ export default function BalanceWidget(props) {
                                             <a href={refLink}
                                                 style={{ fontSize: '66%' }}
                                                 className="btn btn-sm btn-outline-secondary smaller"
-                                                target="_blank">{TheLang.BalanceWidget.viewOnExplorer}</a>&nbsp;<button
+                                                target="_blank">&nbsp;{TheLang.BalanceWidget.viewOnExplorer}</a>&nbsp;<button
                                                     style={{ fontSize: '66%' }}
                                                     onClick={handleRefresh}
                                                     className="btn btn-sm btn-outline-secondary smaller"

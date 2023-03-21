@@ -4,6 +4,7 @@ import { Container, Image, Nav, Navbar, NavDropdown } from "react-bootstrap";
 import { SMRT16Context } from "../SMRT16Context";
 import { TheLang } from "../../data/lang.js";
 import ConnectWalletButton from "../ConnectWalletButton";
+import NoSSR from "react-no-ssr";
 
 export const TopbarContext = React.createContext();
 
@@ -31,13 +32,15 @@ export default function Topbar(props) {
               <Nav.Link href="/faq">{TheLang.Topbar.faq}</Nav.Link>
             </Nav>
           </Navbar.Collapse>
+          <Navbar.Toggle aria-controls="top-navbar-nav" />
           <Nav className="justify-content-end" >
             <Nav.Item>
-              <ConnectWalletButton />
+          
+              <NoSSR><ConnectWalletButton /></NoSSR>
             </Nav.Item>
           </Nav>
 
-          <Navbar.Toggle aria-controls="top-navbar-nav" />
+          
         </Container>
       </Navbar>
     </header>

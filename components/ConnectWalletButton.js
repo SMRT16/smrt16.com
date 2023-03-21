@@ -5,11 +5,12 @@ import { TheLang } from "../data/lang.js";
 import { useAccount, useConnect, useDisconnect } from 'wagmi'
 import { InjectedConnector } from 'wagmi/connectors/injected'
 import { Button } from "react-bootstrap";
+import { useRouter } from "next/router";
 
 // Component which appears in the menu and shows a link "My Page" || "Install MetaMask"
 export default function ConnectWalletButton(props) {
     const { children, ...otherProps } = props;
-
+    const router = useRouter();
     const [myButton, setMyButton] = useState('');
     const {SMRT16dispatch} = useContext(SMRT16Context);
     const { address, isConnected } = useAccount()
@@ -24,8 +25,9 @@ export default function ConnectWalletButton(props) {
                     <Button title={address} onClick={() => disconnect()}>{TheLang.disconnectWallet}</Button>
             );
             SMRT16dispatch({ reason: "connect", ethereum:window.ethereum  });
-        } else {
             
+            router.push("/1");
+        } else {
             setMyButton(<Button onClick={() => connect()}>{TheLang.connectWallet}</Button>);
         }
     },[isConnected])

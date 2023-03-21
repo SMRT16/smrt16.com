@@ -19,7 +19,7 @@ export default function IndexPage() {
     <>
       <Header />
       <Topbar />
-      <HeroSection />
+      <HeroSection /> 
       <Container id="index">
         <Row>
           <Col sm={12} lg={6} md={12}>

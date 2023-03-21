@@ -4,6 +4,7 @@ import CopyToClipboard from "react-copy-to-clipboard";
 import QRCode from "react-qr-code";
 import ReactToPrint from "react-to-print";
 import { TheData } from "../../data/data";
+import { TheLang } from "../../data/lang";
 import { SMRT16Context } from "../SMRT16Context";
 
 
@@ -22,13 +23,13 @@ export default function SellWidget(props) {
     return (
         <Card title="Sell Widget">
             <Card.Body>
-                <Card.Title>{TheData.sellTitle}</Card.Title>
+                <Card.Title>{TheLang.sellTitle}</Card.Title>
                 {context.r.ethereum && context.r.pcontract!='0x0000000000000000000000000000000000000000'?
                 <Stack gap={4}>
                     <div style={{textAlign:"right"}}>
-                        <CopyToClipboard text={refLink} onCopy={() => setCopyText(TheData.copiedToClipboad)} >
-                            <button style={{fontSize:'66%'}} title={TheData.copyToClipboard}
-                                className="btn btn-sm btn-outline-secondary smaller">{TheData.copyToClipboard}</button>
+                        <CopyToClipboard text={refLink} onCopy={() => setCopyText(TheLang.copiedToClipboad)} >
+                            <button style={{fontSize:'66%'}} title={TheLang.copyToClipboard}
+                                className="btn btn-sm btn-outline-secondary smaller">{TheLang.copyToClipboard}</button>
                         </CopyToClipboard>&nbsp;
                         <button style={{fontSize:'66%'}} 
                                 className="btn btn-sm btn-outline-secondary smaller" 
@@ -36,7 +37,7 @@ export default function SellWidget(props) {
                                 aria-controls="collapse-qr"
                                 aria-expanded={openQR}
                         >
-                            {openQR?TheData.hideQRcode:TheData.showQRcode}
+                            {openQR?TheLang.hideQRcode:TheLang.showQRcode}
                         </button>&nbsp;
                         
                     </div>
@@ -46,7 +47,7 @@ export default function SellWidget(props) {
                         <p><a className="smaller" 
                             target="_blank"
                             href={refLink} >{refLink}</a></p>
-                            {TheData.yourReferralLinkExpl}
+                            {TheLang.yourReferralLinkExpl}
                         </div>  
                         
                         <Collapse in={openQR}>
@@ -61,19 +62,19 @@ export default function SellWidget(props) {
                                 <ReactToPrint trigger={() => {
                                         return (<button style={{fontSize:'66%'}} 
                                                 className="btn btn-sm btn-outline-secondary smaller" 
-                                                >{TheData.printQRcode}</button>);
+                                                >{TheLang.printQRcode}</button>);
                                     }} content={() => componentRef} />
                             </Stack>
                         </Collapse>
                     </Stack>
                 </Stack>
                 :<>
-                <p>{TheData.youDontHaveLink}</p>
-                <p>{TheData.youNeedToBuy}</p>
+                <p>{TheLang.youDontHaveLink}</p>
+                <p>{TheLang.youNeedToBuy}</p>
                 <p></p>
                 </>}
             </Card.Body>
-        <Card.Footer>{TheData.sellFooter}</Card.Footer>
+        <Card.Footer>{TheLang.sellFooter}</Card.Footer>
     </Card>
         
     );

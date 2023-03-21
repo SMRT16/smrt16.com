@@ -14,7 +14,7 @@ export default function MyContent(props) {
         <>
             <Row>
                 <Col sm={12} lg={{span:6, order:"last"}} md={12}>
-                    <ProfileWidget />
+                    {/* <ProfileWidget /> */}
                     <BuyFromButton />
                 </Col>
                 <Col sm={12} lg={6} md={12}>
