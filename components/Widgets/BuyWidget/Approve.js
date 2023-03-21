@@ -3,6 +3,7 @@ import useLocalStorage from "use-local-storage";
 import { Stack } from "react-bootstrap";
 import CurrencyInput from "react-currency-input-field";
 import { Skeleton } from "@mui/material";
+import { TheData } from "../../../data/data";
 
 
 /**

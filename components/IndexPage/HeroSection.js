@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Col, Container, Image, Row } from "react-bootstrap";
 
 export default function HeroSection(props) {
@@ -10,7 +11,7 @@ export default function HeroSection(props) {
                         <Col className="hero-text" sm={12} lg={6} md={12}>
                             <h1>Join the Future of Referral Marketing with SMRT16</h1>
                             <p>The Decentralized Affiliate Multilevel Marketing Program on the Polygon Blockchain!</p>
-                            <a href="#features" class="btn btn-primary btn-lg">Get started</a>
+                            <Link href="/1" class="btn btn-primary btn-lg">Get started</Link>
                         </Col>
                         <Col className="hero-image" sm={12} lg={6} md={12}>
                             <Image src="smrt16-hero-image.png" alt="SMRT16 Hero Image" />
