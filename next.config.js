@@ -5,6 +5,9 @@ const nextConfig = {
   compiler: {
     removeConsole: false,
   },
+  images: {
+    unoptimized: true,
+  }
 }
 
 module.exports = nextConfig
