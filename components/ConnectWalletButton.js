@@ -26,7 +26,6 @@ export default function ConnectWalletButton(props) {
             );
             SMRT16dispatch({ reason: "connect", ethereum:window.ethereum  });
             
-            router.push("/1");
         } else {
             setMyButton(<Button onClick={() => connect()}>{TheLang.connectWallet}</Button>);
         }
