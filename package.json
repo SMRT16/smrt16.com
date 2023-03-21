@@ -1,6 +1,6 @@
 {
   "name": "smrt16.com",
-  "version": "0.46.10",
+  "version": "0.46.11",
   "private": true,
   "license": "MIT",
   "scripts": {
@@ -43,6 +43,7 @@
     "react-gravatar": "^2.6.3",
     "react-hover-video-player": "^9.7.1",
     "react-markdown": "^8.0.4",
+    "react-no-ssr": "^1.1.0",
     "react-qr-code": "^2.0.8",
     "react-to-print": "^2.14.10",
     "remark-gfm": "^3.0.1",
