@@ -156,7 +156,8 @@ Partners of the SMTR16 project are highly motivated to engage in marketing - aft
     "loading": "Loading...",
     "connectWallet": "Connect Wallet",
     "disconnectWallet": "Disconnect Wallet",
-    "slug":"Join SMRT16 partners who enjoy direct interaction with our transparent, unchangeable smart contract, guaranteeing steady earnings via a 4-level referral program.",
-    "callToAction":"Join Our Community",
-    "callToActionBtn":"Get started",
+    "slug1":"SMRT16: Decentralized, open-source referral program.",
+    "slug2":"Seamlessly operates with USDT, no token trading hassle.",
+    "callToAction":"Decentralized Referral Earnings",
+    "callToActionBtn":"Join Our Community",
 };
