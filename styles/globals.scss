@@ -302,7 +302,6 @@ ol.indexList li:before {
     font-weight: 500;
     font-size: 42px;
     line-height: 58px;
-    color: #060C3C;
     margin: 12px 0px;
   }
   h2 {
@@ -315,7 +314,7 @@ ol.indexList li:before {
 
     text-align: center;
 
-    color: #000000;
+  
     margin: 48px auto;
   }
 
@@ -336,7 +335,7 @@ ol.indexList li:before {
     margin: 100px auto;
     text-align: center;
 
-    color: #000000;
+   
     max-width: 858px;
     @media (width <= 768px) {
       margin: 32px auto;
@@ -377,7 +376,7 @@ ol.indexList li:before {
 
     text-align: left;
 
-    color: #000000;
+    
   }
 
   
@@ -438,13 +437,14 @@ ol.indexList li:before {
   text-align: center;
 }
 
-#getstarted, #getstarted3 {
+#getstarted, #getstarted3, #whatsmrt16 {
   text-align: center;
-}
-
-#getstarted3 {
   margin: 48px 0px 0px  0px;
 }
+
+// #getstarted3 {
+//   margin: 48px 0px 0px  0px;
+// }
 
 .index3 {
   font-family: 'Plus Jakarta Sans';
@@ -566,17 +566,6 @@ div.HeroSection {
     line-height: 150%;
   }
   
-  // .btn {
-  //   display: inline-block;
-  //   background-color: #4CA1AF;
-  //   color: #FFFFFF;
-  //   font-size: 18px;
-  //   font-weight: bold;
-  //   text-transform: uppercase;
-  //   padding: 20px 40px;
-  //   border-radius: 50px;
-  //   transition: all 0.2s ease-in-out;
-  // }
   
   .hero-image img {
     max-width: 100%;

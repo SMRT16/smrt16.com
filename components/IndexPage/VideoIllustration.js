@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Button, Card } from "react-bootstrap";
 import HoverVideoPlayer from "react-hover-video-player";
 
@@ -23,7 +24,7 @@ export default function VideoIllustration(props) {
                       }}
                     />
                   }
-                /> */}
+                /> 
                 <ul>
                   <li>Spend USDT, receive USDT</li>
                   <li>It&apos;s Polygon main net USDT</li>
@@ -40,7 +41,9 @@ export default function VideoIllustration(props) {
                   <Button as="a" href="/0">Just try it out! You’ll fall in love</Button>
                 </div>
                 
-                
+                */}
+
+                <Image fluid src="/tree-illustration.svg" height={600} width={600} />
         </div>
         
     );
