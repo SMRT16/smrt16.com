@@ -10,6 +10,7 @@ import MyContent from "../components/ID/MyContent";
 import TheirsContent from "../components/ID/TheirsContent";
 import RedirectWrapper from "../components/RedirectWrapper";
 import { SMRT16Context } from "../components/SMRT16Context";
+import { TheLang } from "../data/lang";
 
 export default function IDPage() {
   const router = useRouter();
@@ -44,7 +45,7 @@ export default function IDPage() {
 
             {!context.r.isPolygon && <Card>
               <Card.Body>
-                <div className="notPolygon">Please, switch your MetaMask to Polygon main net!</div>
+                <div className="notPolygon">{TheLang.walletPolygonConnectionNeeded}</div>
               </Card.Body>
             </Card>}
 
