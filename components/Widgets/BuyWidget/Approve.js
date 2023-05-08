@@ -138,6 +138,8 @@ export default function Approve(props) {
                         <CurrencyInput
                             style={{margin:"15px"}}
                             id="amount"
+                            disableGroupSeparators={true}
+                            decimalSeparator="."
                             name="amount"
                             placeholder="Please enter a number"
                             defaultValue={amount}
