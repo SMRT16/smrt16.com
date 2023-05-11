@@ -152,7 +152,7 @@ Partners of the SMTR16 project are highly motivated to engage in marketing - aft
     "PolygonNotConnected": "Your wallet is not connected to Polygon!",
     "opensInNewWindow": "Opens in a new window",
     "license": "Released under the [MIT Licence](https://github.com/SMRT16/smrt16.com#license)",
-    "walletPolygonConnectionNeeded": "Please, switch your MetaMask to Polygon main net!",
+    "walletPolygonConnectionNeeded": "Please, connect your wallet or switch it to Polygon mainnet!",
     "loading": "Loading...",
     "connectWallet": "Connect Wallet",
     "disconnectWallet": "Disconnect Wallet",

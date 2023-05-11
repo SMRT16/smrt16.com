@@ -74,6 +74,8 @@ export default function BarsIllustration(props) {
                 decimalsLimit={2}
                 defaultValue={b}
                 maxLength={6}
+                disableGroupSeparators={true}
+                decimalSeparator="."
                 id="Average"
                 prefix="$"
                 onValueChange={(value) => {
@@ -88,6 +90,8 @@ export default function BarsIllustration(props) {
                 decimalsLimit={0}
                 defaultValue={a}
                 maxLength={2}
+                disableGroupSeparators={true}
+                decimalSeparator="."
                 id="Affiliates"
                 onValueChange={(value) => {
                   setRefCount(value);

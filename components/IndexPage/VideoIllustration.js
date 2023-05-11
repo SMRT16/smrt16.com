@@ -43,7 +43,7 @@ export default function VideoIllustration(props) {
                 
                 */}
 
-                <Image fluid src="/tree-illustration.svg" height={600} width={600} />
+                <Image src="/tree-illustration.svg" height={600} width={600} />
         </div>
         
     );

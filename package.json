@@ -1,10 +1,11 @@
 {
   "name": "smrt16.com",
-  "version": "0.46.15",
+  "version": "0.46.18",
   "private": true,
   "license": "MIT",
   "scripts": {
-    "dev": "yarn version --patch && genversion version.js && next dev",
+    "dev": "next dev",
+    "dev-inc": "yarn version --patch && genversion version.js && next dev",
     "dev-inspect": "NODE_OPTIONS='--inspect' next dev",
     "build": "genversion version.js && next build",
     "build-patch": "yarn version --patch && genversion version.js && next build",
