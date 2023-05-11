@@ -21,7 +21,7 @@ export const TheLang = {
         and a decentralized application. 
         All functions are available "as is," and the website does not provide investment advice.
         
-        Copyright 2023 - HRIH Investments
+        'Copyright 2023 - HRIH Investments'
         `,
 
         "diclimerBottomline":
