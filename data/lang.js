@@ -59,7 +59,7 @@ export const TheLang = {
         "howitworks": `
         It works as follows: everyone who has ever bought a SMRT16 token through a DApp or directly using the functions of a smart contract becomes a project partner. 
         It is impossible to buy tokens without specifying a referrer. After the purchase, your wallet address becomes your referral code at the same time. 
-        And if you add hrihinvestments.co.za/ and your wallet address, you get your referral link, for example: hrihinvestments.co.za/0x8B5D5a87b81c068a6e1e9Fa5121e62344209814A.
+        And if you add smrt16.com/ and your wallet address, you get your referral link, for example: smrt16.com/0x8B5D5a87b81c068a6e1e9Fa5121e62344209814A.
 
         Thus, you become an agent of the project and now you can invite other people to buy SMRT16 tokens. For you - a four-level referral system, in which up to 93.75% of the transaction value is distributed among users directly involved in the transaction. Instant payment of referral bonuses occurs automatically and is guaranteed by a smart contract code on the blockchain.
 
