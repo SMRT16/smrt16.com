@@ -20,6 +20,8 @@ export const TheLang = {
         HRIH Investments provides information about the SMRT16 project, which combines smart contracts 
         and a decentralized application. 
         All functions are available "as is," and the website does not provide investment advice.
+        
+        Copyright 2023 - HRIH Investments
         `,
 
         "diclimerBottomline":
@@ -135,7 +137,7 @@ Partners of the SMTR16 project are highly motivated to engage in marketing - aft
     "itsYourPage": "It's Your page",
     "somebody": "random account",
     "sellTitle": "Your referral link",
-    "sellFooter": `The link consists of the smrt16.com - the domain of the DApp concatenated by '/' with the address of your wallet. 
+    "sellFooter": `The link consists of the https://hrihinvestments.co.za - the domain of the DApp concatenated by '/' with the address of your wallet. 
         Note: that your referral bonuses is limited with your SMRT6 balance.`,
     "copyToClipboard": "Copy Link",
     "copiedToClipboad": "Copied",
