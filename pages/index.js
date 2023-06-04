@@ -122,7 +122,7 @@ export default function IndexPage() {
                     After the purchase, the user&apos;s wallet address becomes their referral code and they can
                     create a referral link by adding &quot;smrt16.com/&quot; followed by their wallet address.
                     <br />
-                    <b>Example: <u>smrt16.com/</u><u style={{ textDecorationStyle: "dashed" }}>0x5c580f5b34f7f7df64f5336f038c8705014a51ee</u>)</b>
+                    <b>Example: <u>hrihinvestments.co.za/</u><u style={{ textDecorationStyle: "dashed" }}>0x0D32886930D0552fa1e2B42BFE5dA66Fd55A147D</u>)</b>
                   </p>
                 </div>
               </Card.Body>
