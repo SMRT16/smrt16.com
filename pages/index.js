@@ -122,7 +122,7 @@ export default function IndexPage() {
                     After the purchase, the user&apos;s wallet address becomes their referral code and they can
                     create a referral link by adding &quot;hrihinvestments.co.za/&quot; followed by their wallet address.
                     <br />
-                    <b>Example: <u>hrihinvestments.africa/</u><u style={{ textDecorationStyle: "dashed" }}>0x0D32886930D0552fa1e2B42BFE5dA66Fd55A147D</u>)</b>
+                    <b>Example: <u>https://hrihinvestments.africa/</u><u style={{ textDecorationStyle: "dashed" }}>0x0D32886930D0552fa1e2B42BFE5dA66Fd55A147D</u>)</b>
                   </p>
                 </div>
               </Card.Body>
